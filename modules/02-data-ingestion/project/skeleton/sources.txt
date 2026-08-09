@@ -1,0 +1,3 @@
+https://example.com/one
+https://example.com/notes/two.md
+https://example.com/fail-x
