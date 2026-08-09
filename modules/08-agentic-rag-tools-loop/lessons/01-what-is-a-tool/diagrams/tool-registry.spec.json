@@ -1,0 +1,15 @@
+{
+  "title": "tool-registry",
+  "elements": [
+    {"type": "rectangle", "x": 60, "y": 80, "w": 160, "h": 70, "text": "Model", "fill": "#d0ebff"},
+    {"type": "rectangle", "x": 360, "y": 80, "w": 180, "h": 70, "text": "Tool registry", "fill": "#ffd8a8"},
+    {"type": "rectangle", "x": 660, "y": 40, "w": 170, "h": 55, "text": "list_notes", "fill": "#b2f2bb"},
+    {"type": "rectangle", "x": 660, "y": 115, "w": 170, "h": 55, "text": "search_notes", "fill": "#b2f2bb"},
+    {"type": "rectangle", "x": 660, "y": 190, "w": 170, "h": 55, "text": "read_note", "fill": "#b2f2bb"},
+    {"type": "rectangle", "x": 360, "y": 260, "w": 470, "h": 70, "text": "your notes folder", "fill": "#ffe8cc"},
+    {"type": "arrow", "x1": 220, "y1": 115, "x2": 360, "y2": 115, "endArrowhead": "arrow"},
+    {"type": "arrow", "x1": 540, "y1": 130, "x2": 660, "y2": 260, "endArrowhead": "arrow"},
+    {"type": "arrow", "x1": 660, "y1": 245, "x2": 660, "y2": 260, "endArrowhead": "arrow"},
+    {"type": "text", "x": 60, "y": 350, "w": 770, "h": 90, "text": "Model calls search_notes(query) by NAME\nRegistry looks it up, runs it, returns the result\nThe model never sees your code — only the schema"}
+  ]
+}

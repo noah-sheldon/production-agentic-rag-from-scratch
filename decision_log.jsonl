@@ -1,0 +1,4 @@
+{"step": "rewrite", "decision": "evals", "reason": "heuristics applied; saved 14 chars"}
+{"step": "search", "decision": ["evals.md", "agents.md"], "reason": "word overlap with rewritten query 'evals'"}
+{"step": "grade", "decision": "relevant", "reason": "evals.md score=1.00"}
+{"step": "answer", "decision": "grounded in evals.md", "reason": "grade passed"}

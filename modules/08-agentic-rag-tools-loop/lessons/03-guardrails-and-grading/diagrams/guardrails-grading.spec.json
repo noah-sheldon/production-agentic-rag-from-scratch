@@ -1,0 +1,23 @@
+{
+  "title": "guardrails-grading",
+  "elements": [
+    {"type": "rectangle", "x": 60, "y": 120, "w": 150, "h": 70, "text": "question", "fill": "#d0ebff"},
+    {"type": "diamond", "x": 330, "y": 110, "w": 180, "h": 90, "text": "guardrail: in domain?", "fill": "#ffe8cc"},
+    {"type": "rectangle", "x": 60, "y": 300, "w": 170, "h": 70, "text": "reject with reason", "fill": "#ffc9c9"},
+    {"type": "rectangle", "x": 640, "y": 110, "w": 170, "h": 70, "text": "search the notes", "fill": "#d0ebff"},
+    {"type": "rectangle", "x": 640, "y": 240, "w": 170, "h": 70, "text": "retrieved documents", "fill": "#d0ebff"},
+    {"type": "diamond", "x": 330, "y": 230, "w": 180, "h": 90, "text": "grade each doc", "fill": "#ffe8cc"},
+    {"type": "rectangle", "x": 60, "y": 440, "w": 170, "h": 70, "text": "drop the doc", "fill": "#b2f2bb"},
+    {"type": "rectangle", "x": 330, "y": 440, "w": 180, "h": 70, "text": "prompt gets the doc", "fill": "#b2f2bb"},
+    {"type": "rectangle", "x": 640, "y": 440, "w": 170, "h": 70, "text": "answer, grounded", "fill": "#ffd8a8"},
+    {"type": "arrow", "x1": 210, "y1": 155, "x2": 330, "y2": 155, "endArrowhead": "arrow"},
+    {"type": "arrow", "x1": 510, "y1": 155, "x2": 640, "y2": 155, "endArrowhead": "arrow"},
+    {"type": "arrow", "x1": 420, "y1": 200, "x2": 420, "y2": 230, "endArrowhead": "arrow"},
+    {"type": "arrow", "x1": 810, "y1": 155, "x2": 810, "y2": 240, "endArrowhead": "arrow"},
+    {"type": "arrow", "x1": 640, "y1": 275, "x2": 510, "y2": 275, "endArrowhead": "arrow"},
+    {"type": "arrow", "x1": 420, "y1": 320, "x2": 420, "y2": 440, "endArrowhead": "arrow"},
+    {"type": "arrow", "x1": 510, "y1": 475, "x2": 640, "y2": 475, "endArrowhead": "arrow"},
+    {"type": "arrow", "x1": 420, "y1": 155, "x2": 420, "y2": 120, "endArrowhead": "arrow"},
+    {"type": "text", "x": 60, "y": 560, "w": 750, "h": 90, "text": "guardrail: stops bad QUESTIONS (before any tool runs)\ngrading: stops bad EVIDENCE (before the prompt)\nboth decisions are numbers with reasons"}
+  ]
+}

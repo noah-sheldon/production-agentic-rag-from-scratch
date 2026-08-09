@@ -1,0 +1,20 @@
+{
+  "title": "rewrite-transparency",
+  "elements": [
+    {"type": "rectangle", "x": 60, "y": 90, "w": 210, "h": 70, "text": "bad query: \"the one about evals\"", "fill": "#ffc9c9"},
+    {"type": "rectangle", "x": 360, "y": 90, "w": 160, "h": 70, "text": "rewrite", "fill": "#ffd8a8"},
+    {"type": "rectangle", "x": 620, "y": 90, "w": 200, "h": 70, "text": "\"evals\" → search notes", "fill": "#b2f2bb"},
+    {"type": "rectangle", "x": 620, "y": 220, "w": 200, "h": 70, "text": "graded documents", "fill": "#d0ebff"},
+    {"type": "rectangle", "x": 620, "y": 350, "w": 200, "h": 70, "text": "answer with citations", "fill": "#ffd8a8"},
+    {"type": "rectangle", "x": 60, "y": 220, "w": 210, "h": 200, "text": "decision log\n(every step writes a line)", "fill": "#fff5f5"},
+    {"type": "arrow", "x1": 270, "y1": 125, "x2": 360, "y2": 125, "endArrowhead": "arrow"},
+    {"type": "arrow", "x1": 520, "y1": 125, "x2": 620, "y2": 125, "endArrowhead": "arrow"},
+    {"type": "arrow", "x1": 720, "y1": 160, "x2": 720, "y2": 220, "endArrowhead": "arrow"},
+    {"type": "arrow", "x1": 720, "y1": 290, "x2": 720, "y2": 350, "endArrowhead": "arrow"},
+    {"type": "arrow", "x1": 160, "y1": 220, "x2": 160, "y2": 160, "endArrowhead": "arrow"},
+    {"type": "arrow", "x1": 440, "y1": 125, "x2": 440, "y2": 220, "endArrowhead": "arrow"},
+    {"type": "arrow", "x1": 620, "y1": 125, "x2": 440, "y2": 220, "endArrowhead": "arrow"},
+    {"type": "arrow", "x1": 720, "y1": 420, "x2": 380, "y2": 220, "endArrowhead": "arrow"},
+    {"type": "text", "x": 60, "y": 480, "w": 760, "h": 90, "text": "rewrite fixes the QUERY before it searches\nthe decision log records every step WITH WHY — a run you can read\ntrace = the story of the answer"}
+  ]
+}

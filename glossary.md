@@ -75,3 +75,57 @@ Every term defined as Noah would explain it: grade-5 words, no jargon.
 - **type checker** — a tool that checks the data types in your code before it runs
 - **test** — a small program that checks your code does what you expect
 - **pre-commit** — a tool that runs checks automatically before you save a change to git
+
+## Module 04 — Chunking and Embeddings
+
+- **section chunker** — a chunker that cuts a document at its headings
+- **fixed-size chunker** — a chunker that cuts text into equal-length pieces
+- **chunk overlap** — a few words repeated at the end of one chunk and the start of the next, so no idea is cut in half
+- **dimension** — one of the numbers in a vector (384 numbers = 384 dimensions)
+- **cosine similarity** — a score between -1 and 1 for how close two vectors point; near 1 = similar
+- **normalized vector** — a vector scaled so its length is 1, which makes cosine similarity equal to a plain dot product
+- **fallback** — the backup plan when the main tool is down (cached data, then keyword search, then a smaller model)
+
+## Module 08 — Agentic RAG: Tools + the Loop
+
+- **tool schema** — the name, description, and list of inputs that tell the model what a tool does
+- **tool registry** — one place that holds every tool and lets you look it up by name
+- **max turns** — the biggest number of decide-call-repeat rounds an agent is allowed
+- **guardrail** — a rule that stops the flow when the input is out of bounds
+- **out-of-domain** — a question about a topic the system was never given
+- **relevant / irrelevant** — a retrieved document's verdict: does it actually answer the query, or not
+- **query rewriting** — fixing a bad question before it goes to search
+- **decision log** — a written record of every choice the agent made, and why
+- **reasoning transparency** — showing the agent's work: what it called and why
+- **LangGraph** — a library that draws the agent loop as a graph of nodes and edges
+- **fake mode** — running the agent with a pretend model, so the loop works without an API key
+
+## Module 09 — Evaluation + Capstone
+
+- **eval set** — a list of questions with known-good answers, used to score an assistant
+- **known-good answer** — the answer a human agrees is correct for one eval question
+- **label** — the correct answer (or the correct note) written by a human for a question
+- **ground truth** — the real answer we know is true, written down before the model answers
+- **groundedness** — the share of an answer's words that came from the retrieved notes, not invented
+- **faithfulness** — another word for groundedness: does the answer stick to the source
+- **grade gate** — a check that rejects low-scoring answers before they reach the user
+- **retry** — running the answer step again with more context or a better search
+- **fallback** — the safe answer when the assistant is not sure: "I don't know" plus citations
+- **pass rate** — the share of eval questions the assistant answers well enough to ship
+- **acceptance criteria** — the tests that decide if a project is done
+- **publish checklist** — the list of things to do before showing your assistant to others
+
+## Module 07 — Observability & Caching
+
+- **observability** — being able to see what your system does: timings, tokens, costs, and failures
+- **span** — one named step inside a trace (for example, the retrieve step)
+- **cache** — a place that remembers past answers so the work isn't repeated
+- **cache key** — the thing that names a cached answer (usually the question, cleaned up)
+- **hit** — the cache already has the answer, so the pipeline is skipped
+- **miss** — the cache doesn't have the answer, so the pipeline runs
+- **hit rate** — hits divided by total questions; how often the cache saves you
+- **TTL (time-to-live)** — how long a cached answer lives before it expires
+- **cost per question** — the price of one answer: tokens times prices
+- **dashboard** — one screen that shows the numbers that matter (latency, cost, hit rate)
+- **Langfuse** — a tool that records traces and cost per call, shown in a web UI
+- **Redis** — a fast cache many programs can share over the network

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "deploy-q",
+    "question": "When does the nightly deploy run?",
+    "answer": "The nightly deploy runs at 3am.",
+    "source": [
+      "deploy"
+    ],
+    "facts": [
+      "runs at 3am"
+    ]
+  },
+  {
+    "id": "ci-q",
+    "question": "How long does CI take?",
+    "answer": "CI takes about 3 minutes.",
+    "source": [
+      "ci"
+    ],
+    "facts": [
+      "3 minutes"
+    ]
+  },
+  {
+    "id": "backup-q",
+    "question": "Where are backups stored?",
+    "answer": "Backups are stored in S3.",
+    "source": [
+      "backup"
+    ],
+    "facts": [
+      "S3"
+    ]
+  },
+  {
+    "id": "evals-q",
+    "question": "What is in the eval set?",
+    "answer": "The eval set has 20 questions, each with a known-good answer and a source note id.",
+    "source": [
+      "evals"
+    ],
+    "facts": [
+      "20 questions",
+      "known-good answer",
+      "source note id"
+    ]
+  },
+  {
+    "id": "agent-loop-q",
+    "question": "What are the steps of the agent loop?",
+    "answer": "Decide which tool to call, call it, and check the result.",
+    "source": [
+      "agent-loop"
+    ],
+    "facts": [
+      "decide",
+      "call",
+      "check"
+    ]
+  },
+  {
+    "id": "gate-q",
+    "question": "What happens when the grade gate sees a low score?",
+    "answer": "A low score triggers a retry. If the retry fails, the assistant says 'I don't know' and shows citations.",
+    "source": [
+      "grade-gate"
+    ],
+    "facts": [
+      "retry",
+      "I don't know",
+      "citations"
+    ]
+  }
+]

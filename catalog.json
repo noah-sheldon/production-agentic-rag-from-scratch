@@ -121,33 +121,223 @@
       "project": true
     },
     {
-      "module": "04-chunking-hybrid-search",
-      "lessons": [],
-      "exercises": [],
-      "quiz": false,
-      "project": false
+      "module": "04-chunking-embeddings",
+      "lessons": [
+        {
+          "lesson": "01-what-is-chunking",
+          "docs": true,
+          "code": [
+            "build.py"
+          ],
+          "artifact": true
+        },
+        {
+          "lesson": "02-embeddings",
+          "docs": true,
+          "code": [
+            "build.py"
+          ],
+          "artifact": true
+        },
+        {
+          "lesson": "03-chunk-size-matters",
+          "docs": true,
+          "code": [
+            "build.py"
+          ],
+          "artifact": true
+        }
+      ],
+      "exercises": [
+        "01_exercises.py",
+        "02_solutions.py"
+      ],
+      "quiz": true,
+      "project": true
     },
     {
-      "module": "05-rag-pipeline-local-llm",
-      "lessons": [],
-      "exercises": [],
-      "quiz": false,
-      "project": false
+      "module": "05-hybrid-search-rrf",
+      "lessons": [
+        {
+          "lesson": "01-rrf-by-hand",
+          "docs": true,
+          "code": [
+            "build.py"
+          ],
+          "artifact": true
+        },
+        {
+          "lesson": "02-when-hybrid-wins",
+          "docs": true,
+          "code": [
+            "build.py"
+          ],
+          "artifact": true
+        },
+        {
+          "lesson": "03-unified-search-api",
+          "docs": true,
+          "code": [
+            "build.py"
+          ],
+          "artifact": true
+        }
+      ],
+      "exercises": [
+        "01_exercises.py",
+        "02_solutions.py"
+      ],
+      "quiz": true,
+      "project": true
     },
     {
-      "module": "06-observability-caching",
-      "lessons": [],
-      "exercises": [],
-      "quiz": false,
-      "project": false
+      "module": "06-rag-pipeline-local-llm",
+      "lessons": [
+        {
+          "lesson": "01-the-rag-flow",
+          "docs": true,
+          "code": [
+            "build.py"
+          ],
+          "artifact": true
+        },
+        {
+          "lesson": "02-prompt-trimming",
+          "docs": true,
+          "code": [
+            "build.py"
+          ],
+          "artifact": true
+        },
+        {
+          "lesson": "03-streaming",
+          "docs": true,
+          "code": [
+            "build.py"
+          ],
+          "artifact": true
+        }
+      ],
+      "exercises": [
+        "01_exercises.py",
+        "02_solutions.py"
+      ],
+      "quiz": true,
+      "project": true
     },
     {
-      "module": "07-agentic-rag-bot",
-      "lessons": [],
-      "exercises": [],
-      "quiz": false,
-      "project": false
+      "module": "07-observability-caching",
+      "lessons": [
+        {
+          "lesson": "01-trace-the-request",
+          "docs": true,
+          "code": [
+            "build.py"
+          ],
+          "artifact": true
+        },
+        {
+          "lesson": "02-cache-with-ttl",
+          "docs": true,
+          "code": [
+            "build.py"
+          ],
+          "artifact": true
+        },
+        {
+          "lesson": "03-cost-per-question",
+          "docs": true,
+          "code": [
+            "build.py"
+          ],
+          "artifact": true
+        }
+      ],
+      "exercises": [
+        "01_exercises.py",
+        "02_solutions.py"
+      ],
+      "quiz": true,
+      "project": true
+    },
+    {
+      "module": "08-agentic-rag-tools-loop",
+      "lessons": [
+        {
+          "lesson": "01-what-is-a-tool",
+          "docs": true,
+          "code": [
+            "build.py"
+          ],
+          "artifact": true
+        },
+        {
+          "lesson": "02-the-agent-loop",
+          "docs": true,
+          "code": [
+            "build.py"
+          ],
+          "artifact": true
+        },
+        {
+          "lesson": "03-guardrails-and-grading",
+          "docs": true,
+          "code": [
+            "build.py"
+          ],
+          "artifact": true
+        },
+        {
+          "lesson": "04-query-rewriting-and-transparency",
+          "docs": true,
+          "code": [
+            "build.py"
+          ],
+          "artifact": true
+        }
+      ],
+      "exercises": [
+        "01_exercises.py",
+        "02_solutions.py"
+      ],
+      "quiz": true,
+      "project": true
+    },
+    {
+      "module": "09-evaluation-capstone",
+      "lessons": [
+        {
+          "lesson": "01-build-an-eval-set",
+          "docs": true,
+          "code": [
+            "build.py"
+          ],
+          "artifact": true
+        },
+        {
+          "lesson": "02-score-your-assistant",
+          "docs": true,
+          "code": [
+            "build.py"
+          ],
+          "artifact": true
+        },
+        {
+          "lesson": "03-the-grade-gate",
+          "docs": true,
+          "code": [
+            "build.py"
+          ],
+          "artifact": true
+        }
+      ],
+      "exercises": [
+        "01_exercises.py",
+        "02_solutions.py"
+      ],
+      "quiz": true,
+      "project": true
     }
   ],
-  "lesson_count": 10
+  "lesson_count": 29
 }

@@ -33,8 +33,11 @@ for m in modules:
     if not lessons:
         errors.append(f"{name}: no lessons/")
     for lesson in lessons:
-        if not (lesson / "docs" / "en.md").exists():
+        doc = lesson / "docs" / "en.md"
+        if not doc.exists():
             errors.append(f"{name}/{lesson.name}: missing docs/en.md")
+        elif "```mermaid" not in doc.read_text(encoding="utf-8", errors="ignore"):
+            errors.append(f"{name}/{lesson.name}: docs/en.md has NO mermaid diagram")
         code_dir = lesson / "code"
         py_files = list(code_dir.glob("*.py")) if code_dir.exists() else []
         if not py_files:
