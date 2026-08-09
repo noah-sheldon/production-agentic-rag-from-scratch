@@ -14,7 +14,7 @@ Answer from memory. A human reviews. No auto-pass.
 
 4. **What are the three ways to learn from this repo?** Name them.
 
-5. **What are you building across the nine modules?** One sentence.
+5. **What are you building across the ten modules (0-9)?** One sentence.
 
 ## Review (for the human)
 
