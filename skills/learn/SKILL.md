@@ -1,6 +1,6 @@
 ---
 name: learn
-description: Tutor loop for the Applied AI from Scratch course — teaches, quizzes, tracks progress
+description: Tutor loop for the Production Agentic RAG from Scratch course — teaches, quizzes, tracks progress
 ---
 
 # /learn
