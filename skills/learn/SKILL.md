@@ -26,6 +26,9 @@ Raw base: `https://raw.githubusercontent.com/noah-sheldon/production-agentic-rag
 ## The loop
 
 1. **Locate** — read LEARNING.md; find the next `To Do` module and its first lesson.
+   **Never skip Module 0 lesson 01 (how-the-course-works): it teaches how to use
+   this course (Six Beats, gates, HITL, the three ways to learn). Teach it
+   before any other lesson — it's 5 minutes even for experienced learners.**
 2. **Recall** — ask what the PREVIOUS lesson shipped, but ONLY if a previous
    lesson's quiz is human-approved in the log. If this is the first lesson, or
    the current lesson has NO human-approved quiz in the log — **it has not been
