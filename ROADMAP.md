@@ -4,8 +4,11 @@ Ten modules (0-9). Every module: lessons (Six Beats, build-first) + **2-3 exerci
 + **a weekly quiz (human-reviewed)** + **a project (your own)**. Projects gate
 modules. No week/day pressure — move at your own pace.
 
-Scope: **production Agentic RAG only.** Agent design patterns (goal-driven,
-result-driven, agent frameworks) live in a future course/series — not here.
+Scope: **production Agentic RAG only — the applied systems layer.** Systems
+from scratch (retrieval, loop, evaluation in plain Python), not models — no
+backprop, no attention math, no training. No math prerequisites; the one
+formula per lesson is built by hand where it's used. Agent design patterns
+(goal-driven, result-driven) live in a future course/series — not here.
 
 ## The modules (build YOUR personal knowledge assistant)
 

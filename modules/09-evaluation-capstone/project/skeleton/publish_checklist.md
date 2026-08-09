@@ -30,4 +30,4 @@ Walk this top to bottom. Each item is one small step; do them in order.
 
 ## Done
 
-When all three boxes are ticked, your assistant is no longer a project — it is a published system. That was the point of all nine modules.
+When all three boxes are ticked, your assistant is no longer a project — it is a published system. That was the point of all ten modules (0-9).

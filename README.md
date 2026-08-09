@@ -17,9 +17,22 @@ curriculum teaches you the system — the loop, the retrieval, the evaluation,
 the cost — by hand. Then, and only then, we import the framework and see what
 it was doing for us.
 
+## What "from scratch" means here (and what it does NOT)
+
+**Systems from scratch, not models.** We build the application layer by hand —
+BM25, hybrid fusion, the RAG flow, the agent loop, evaluation — in plain
+Python. We do NOT derive model internals: no backprop, no attention math, no
+training. If you want math-from-scratch AI, that's a different course (there
+are good ones). This one is for **applied AI/ML engineers**: you build and
+ship the systems, measured.
+
+**No math prerequisites.** The only math you'll meet (cosine similarity, IDF,
+RRF, cost arithmetic) is built by hand inside the lesson where it's used — one
+formula at a time, in plain words.
+
 ## Curriculum v1.0 (2026) — open source · MIT
 
-Nine modules, build YOUR personal knowledge assistant — from an empty machine
+Ten modules (0-9), build YOUR personal knowledge assistant — from an empty machine
 to a tool-wielding agent over your own notes. No week/day framing; move at
 your own pace, projects gate modules.
 

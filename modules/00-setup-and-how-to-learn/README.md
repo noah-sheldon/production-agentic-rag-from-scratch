@@ -10,6 +10,15 @@
 - Install the terminal tutor (`npx skills add` — optional, works on any machine with an agent)
 - How the course works: the Six Beats, build-first, exercises, HITL quiz, projects
 
+## What this course is NOT
+
+- NOT model training from scratch — no backprop, no attention math, no
+  building a transformer. That's a different course.
+- NOT a math prerequisite course — the only math you'll meet (cosine, IDF,
+  RRF, cost) is built by hand inside the lesson that uses it.
+- This IS: the production systems layer, built in plain Python, measured,
+  for applied AI/ML engineers.
+
 ## How the course works (read this once)
 
 1. **Build first.** Every lesson builds the concept in plain Python BEFORE a framework is imported. You type the code, you see the system.
