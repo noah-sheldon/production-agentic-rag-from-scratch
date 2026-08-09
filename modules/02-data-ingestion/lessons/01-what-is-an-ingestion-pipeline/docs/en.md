@@ -18,6 +18,8 @@ flowchart LR
     DB --> Q[Re-run: skips what's done]
 ```
 
+**Diagram (whiteboard):** open `diagrams/pipeline-resume.excalidraw` in excalidraw.com — same picture, traceable by hand.
+
 ## BUILD IT
 
 ```bash

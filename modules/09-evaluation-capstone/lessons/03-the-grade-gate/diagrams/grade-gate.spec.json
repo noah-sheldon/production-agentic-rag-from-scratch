@@ -1,0 +1,73 @@
+{
+ "title": "grade-gate",
+ "elements": [
+  {
+   "type": "rectangle",
+   "x": 60,
+   "y": 120,
+   "w": 160,
+   "h": 70,
+   "text": "Answer",
+   "fill": "#a5d8ff"
+  },
+  {
+   "type": "rectangle",
+   "x": 330,
+   "y": 60,
+   "w": 190,
+   "h": 70,
+   "text": "Score \u2265 gate \u2192 ship",
+   "fill": "#b2f2bb"
+  },
+  {
+   "type": "rectangle",
+   "x": 330,
+   "y": 180,
+   "w": 190,
+   "h": 70,
+   "text": "Low score \u2192 retry",
+   "fill": "#ffd8a8"
+  },
+  {
+   "type": "rectangle",
+   "x": 330,
+   "y": 300,
+   "w": 190,
+   "h": 70,
+   "text": "Still low \u2192 \"I don't know\"",
+   "fill": "#ffc9c9"
+  },
+  {
+   "type": "arrow",
+   "x1": 220,
+   "y1": 155,
+   "x2": 330,
+   "y2": 95,
+   "endArrowhead": "arrow"
+  },
+  {
+   "type": "arrow",
+   "x1": 220,
+   "y1": 155,
+   "x2": 330,
+   "y2": 215,
+   "endArrowhead": "arrow"
+  },
+  {
+   "type": "arrow",
+   "x1": 425,
+   "y1": 250,
+   "x2": 425,
+   "y2": 300,
+   "endArrowhead": "arrow"
+  },
+  {
+   "type": "text",
+   "x": 620,
+   "y": 60,
+   "w": 400,
+   "h": 200,
+   "text": "Before: hallucinations shipped.\nAfter: 0 shipped \u2014\ncaught by the gate,\nnot by luck."
+  }
+ ]
+}

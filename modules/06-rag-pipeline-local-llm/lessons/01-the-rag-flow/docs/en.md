@@ -24,6 +24,8 @@ flowchart LR
     D -. "no hallucination" .-> Q
 ```
 
+**Diagram (whiteboard):** open `diagrams/rag-flow.excalidraw` in excalidraw.com — same picture, traceable by hand.
+
 ## BUILD IT
 
 ```bash

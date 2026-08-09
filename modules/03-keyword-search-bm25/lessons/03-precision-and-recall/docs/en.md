@@ -15,6 +15,8 @@ flowchart LR
     R[all relevant docs] --> C["recall = relevant ∩ retrieved / relevant"]
 ```
 
+**Diagram (whiteboard):** open `diagrams/prec-recall.excalidraw` in excalidraw.com — same picture, traceable by hand.
+
 ## BUILD IT
 
 ```bash

@@ -29,6 +29,8 @@ flowchart LR
     M --> R["savings factor 150-400x"]
 ```
 
+**Diagram (whiteboard):** open `diagrams/cost-math.excalidraw` in excalidraw.com — same picture, traceable by hand.
+
 ## BUILD IT
 
 ```bash

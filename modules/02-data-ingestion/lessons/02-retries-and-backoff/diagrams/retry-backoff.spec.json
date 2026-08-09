@@ -1,0 +1,81 @@
+{
+ "title": "retry-backoff",
+ "elements": [
+  {
+   "type": "rectangle",
+   "x": 60,
+   "y": 60,
+   "w": 150,
+   "h": 70,
+   "text": "Request",
+   "fill": "#a5d8ff"
+  },
+  {
+   "type": "rectangle",
+   "x": 300,
+   "y": 60,
+   "w": 150,
+   "h": 70,
+   "text": "OK?",
+   "fill": "#ffffff"
+  },
+  {
+   "type": "rectangle",
+   "x": 560,
+   "y": 60,
+   "w": 160,
+   "h": 70,
+   "text": "Next item",
+   "fill": "#b2f2bb"
+  },
+  {
+   "type": "rectangle",
+   "x": 300,
+   "y": 240,
+   "w": 200,
+   "h": 70,
+   "text": "Wait: 1s, 2s, 4s...",
+   "fill": "#ffd8a8"
+  },
+  {
+   "type": "arrow",
+   "x1": 210,
+   "y1": 95,
+   "x2": 300,
+   "y2": 95,
+   "endArrowhead": "arrow"
+  },
+  {
+   "type": "arrow",
+   "x1": 450,
+   "y1": 95,
+   "x2": 560,
+   "y2": 95,
+   "endArrowhead": "arrow"
+  },
+  {
+   "type": "arrow",
+   "x1": 370,
+   "y1": 130,
+   "x2": 370,
+   "y2": 240,
+   "endArrowhead": "arrow"
+  },
+  {
+   "type": "arrow",
+   "x1": 300,
+   "y1": 275,
+   "x2": 210,
+   "y2": 105,
+   "endArrowhead": "arrow"
+  },
+  {
+   "type": "text",
+   "x": 560,
+   "y": 240,
+   "w": 300,
+   "h": 70,
+   "text": "Budget exhausted \u2192\nmark failed, move on."
+  }
+ ]
+}

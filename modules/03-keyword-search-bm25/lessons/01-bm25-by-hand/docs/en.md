@@ -18,6 +18,8 @@ flowchart LR
     S --> R[rank documents by score]
 ```
 
+**Diagram (whiteboard):** open `diagrams/bm25-score.excalidraw` in excalidraw.com — same picture, traceable by hand.
+
 ## BUILD IT
 
 ```bash

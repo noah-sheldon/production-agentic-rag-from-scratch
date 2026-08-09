@@ -1,0 +1,73 @@
+{
+ "title": "rrf-fusion",
+ "elements": [
+  {
+   "type": "rectangle",
+   "x": 60,
+   "y": 60,
+   "w": 180,
+   "h": 70,
+   "text": "Keyword ranks",
+   "fill": "#a5d8ff"
+  },
+  {
+   "type": "rectangle",
+   "x": 60,
+   "y": 180,
+   "w": 180,
+   "h": 70,
+   "text": "Semantic ranks",
+   "fill": "#b2f2bb"
+  },
+  {
+   "type": "rectangle",
+   "x": 400,
+   "y": 120,
+   "w": 200,
+   "h": 70,
+   "text": "Fuse: 1/(k+rank)",
+   "fill": "#ffd8a8"
+  },
+  {
+   "type": "rectangle",
+   "x": 720,
+   "y": 120,
+   "w": 200,
+   "h": 70,
+   "text": "Fused ranking",
+   "fill": "#ffffff"
+  },
+  {
+   "type": "arrow",
+   "x1": 240,
+   "y1": 95,
+   "x2": 400,
+   "y2": 145,
+   "endArrowhead": "arrow"
+  },
+  {
+   "type": "arrow",
+   "x1": 240,
+   "y1": 215,
+   "x2": 400,
+   "y2": 175,
+   "endArrowhead": "arrow"
+  },
+  {
+   "type": "arrow",
+   "x1": 600,
+   "y1": 155,
+   "x2": 720,
+   "y2": 155,
+   "endArrowhead": "arrow"
+  },
+  {
+   "type": "text",
+   "x": 400,
+   "y": 30,
+   "w": 400,
+   "h": 40,
+   "text": "Rank-based fusion beats score averaging"
+  }
+ ]
+}

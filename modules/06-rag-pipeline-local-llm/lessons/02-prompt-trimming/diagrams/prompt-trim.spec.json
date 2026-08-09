@@ -1,0 +1,31 @@
+{
+ "title": "prompt-trim",
+ "elements": [
+  {
+   "type": "rectangle",
+   "x": 60,
+   "y": 60,
+   "w": 260,
+   "h": 90,
+   "text": "Fat prompt: everything",
+   "fill": "#ffc9c9"
+  },
+  {
+   "type": "rectangle",
+   "x": 60,
+   "y": 220,
+   "w": 260,
+   "h": 90,
+   "text": "Trimmed: only the chunks",
+   "fill": "#b2f2bb"
+  },
+  {
+   "type": "text",
+   "x": 400,
+   "y": 60,
+   "w": 500,
+   "h": 200,
+   "text": "Smaller prompt = faster answer,\nless cost, less hallucination.\n1253 \u2192 74 tokens \u2248 17\u00d7 faster.\nMeasure it, don't feel it."
+  }
+ ]
+}

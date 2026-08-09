@@ -1,0 +1,73 @@
+{
+ "title": "rag-flow",
+ "elements": [
+  {
+   "type": "rectangle",
+   "x": 60,
+   "y": 120,
+   "w": 150,
+   "h": 70,
+   "text": "Question",
+   "fill": "#a5d8ff"
+  },
+  {
+   "type": "rectangle",
+   "x": 300,
+   "y": 120,
+   "w": 160,
+   "h": 70,
+   "text": "Retrieve chunks",
+   "fill": "#ffffff"
+  },
+  {
+   "type": "rectangle",
+   "x": 550,
+   "y": 120,
+   "w": 160,
+   "h": 70,
+   "text": "Prompt: Q + chunks",
+   "fill": "#ffffff"
+  },
+  {
+   "type": "rectangle",
+   "x": 800,
+   "y": 120,
+   "w": 180,
+   "h": 70,
+   "text": "Model answers",
+   "fill": "#b2f2bb"
+  },
+  {
+   "type": "arrow",
+   "x1": 210,
+   "y1": 155,
+   "x2": 300,
+   "y2": 155,
+   "endArrowhead": "arrow"
+  },
+  {
+   "type": "arrow",
+   "x1": 460,
+   "y1": 155,
+   "x2": 550,
+   "y2": 155,
+   "endArrowhead": "arrow"
+  },
+  {
+   "type": "arrow",
+   "x1": 710,
+   "y1": 155,
+   "x2": 800,
+   "y2": 155,
+   "endArrowhead": "arrow"
+  },
+  {
+   "type": "text",
+   "x": 60,
+   "y": 30,
+   "w": 700,
+   "h": 40,
+   "text": "The model only sees your chunks, not your library."
+  }
+ ]
+}

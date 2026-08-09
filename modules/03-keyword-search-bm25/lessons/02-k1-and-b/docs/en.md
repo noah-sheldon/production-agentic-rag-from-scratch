@@ -16,6 +16,8 @@ flowchart LR
     S[score per term] --> R[ranking]
 ```
 
+**Diagram (whiteboard):** open `diagrams/two-knobs.excalidraw` in excalidraw.com — same picture, traceable by hand.
+
 ## BUILD IT
 
 ```bash

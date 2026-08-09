@@ -26,6 +26,8 @@ flowchart TD
     G -- no, very low --> F
 ```
 
+**Diagram (whiteboard):** open `diagrams/grade-gate.excalidraw` in excalidraw.com — same picture, traceable by hand.
+
 ## BUILD IT
 
 ```bash

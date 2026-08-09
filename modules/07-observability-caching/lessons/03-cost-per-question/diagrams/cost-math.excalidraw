@@ -1,0 +1,197 @@
+{
+ "type": "excalidraw",
+ "version": 2,
+ "source": "https://excalidraw.com",
+ "elements": [
+  {
+   "id": "el-0",
+   "type": "rectangle",
+   "x": 60,
+   "y": 60,
+   "width": 260,
+   "height": 90,
+   "angle": 0,
+   "strokeColor": "#1e1e1e",
+   "backgroundColor": "#ffc9c9",
+   "fillStyle": "solid",
+   "strokeWidth": 2,
+   "strokeStyle": "solid",
+   "roughness": 1,
+   "opacity": 100,
+   "groupIds": [],
+   "frameId": null,
+   "roundness": {
+    "type": 3
+   },
+   "seed": 4107661098,
+   "version": 61226,
+   "versionNonce": 1047,
+   "isDeleted": false,
+   "boundElements": [
+    {
+     "id": "el-0-t",
+     "type": "text"
+    }
+   ],
+   "updated": 1,
+   "link": null,
+   "locked": false,
+   "customData": {
+    "content-planner": true
+   }
+  },
+  {
+   "id": "el-0-t",
+   "type": "text",
+   "x": 60.0,
+   "y": 91.0,
+   "width": 260,
+   "height": 28,
+   "angle": 0,
+   "strokeColor": "#1e1e1e",
+   "backgroundColor": "transparent",
+   "fillStyle": "hachure",
+   "strokeWidth": 2,
+   "strokeStyle": "solid",
+   "roughness": 1,
+   "opacity": 100,
+   "groupIds": [],
+   "frameId": null,
+   "roundness": null,
+   "seed": 2028142851,
+   "version": 259,
+   "versionNonce": 46624,
+   "isDeleted": false,
+   "boundElements": [],
+   "updated": 1,
+   "link": null,
+   "locked": false,
+   "customData": {
+    "content-planner": true
+   },
+   "textAlign": "center",
+   "verticalAlign": "middle",
+   "containerId": "el-0",
+   "originalText": "1000 questions, uncached",
+   "fontSize": 20,
+   "fontFamily": 1,
+   "text": "1000 questions, uncached"
+  },
+  {
+   "id": "el-1",
+   "type": "rectangle",
+   "x": 60,
+   "y": 220,
+   "width": 260,
+   "height": 90,
+   "angle": 0,
+   "strokeColor": "#1e1e1e",
+   "backgroundColor": "#b2f2bb",
+   "fillStyle": "solid",
+   "strokeWidth": 2,
+   "strokeStyle": "solid",
+   "roughness": 1,
+   "opacity": 100,
+   "groupIds": [],
+   "frameId": null,
+   "roundness": {
+    "type": 3
+   },
+   "seed": 4106304974,
+   "version": 15822,
+   "versionNonce": 32209,
+   "isDeleted": false,
+   "boundElements": [
+    {
+     "id": "el-1-t",
+     "type": "text"
+    }
+   ],
+   "updated": 1,
+   "link": null,
+   "locked": false,
+   "customData": {
+    "content-planner": true
+   }
+  },
+  {
+   "id": "el-1-t",
+   "type": "text",
+   "x": 60.0,
+   "y": 251.0,
+   "width": 260,
+   "height": 28,
+   "angle": 0,
+   "strokeColor": "#1e1e1e",
+   "backgroundColor": "transparent",
+   "fillStyle": "hachure",
+   "strokeWidth": 2,
+   "strokeStyle": "solid",
+   "roughness": 1,
+   "opacity": 100,
+   "groupIds": [],
+   "frameId": null,
+   "roundness": null,
+   "seed": 484371684,
+   "version": 60644,
+   "versionNonce": 27544,
+   "isDeleted": false,
+   "boundElements": [],
+   "updated": 1,
+   "link": null,
+   "locked": false,
+   "customData": {
+    "content-planner": true
+   },
+   "textAlign": "center",
+   "verticalAlign": "middle",
+   "containerId": "el-1",
+   "originalText": "1000 questions, cached",
+   "fontSize": 20,
+   "fontFamily": 1,
+   "text": "1000 questions, cached"
+  },
+  {
+   "id": "el-2",
+   "type": "text",
+   "x": 400,
+   "y": 60,
+   "width": 500,
+   "height": 200,
+   "angle": 0,
+   "strokeColor": "#1e1e1e",
+   "backgroundColor": "transparent",
+   "fillStyle": "hachure",
+   "strokeWidth": 2,
+   "strokeStyle": "solid",
+   "roughness": 1,
+   "opacity": 100,
+   "groupIds": [],
+   "frameId": null,
+   "roundness": null,
+   "seed": 3727471864,
+   "version": 46328,
+   "versionNonce": 58457,
+   "isDeleted": false,
+   "boundElements": [],
+   "updated": 1,
+   "link": null,
+   "locked": false,
+   "customData": {
+    "content-planner": true
+   },
+   "textAlign": "center",
+   "verticalAlign": "middle",
+   "containerId": null,
+   "originalText": "Each question = tokens = money.\nCache turns repeat questions\ninto near-zero cost.\nThe 150-400x is multiplication,\nnot magic.",
+   "fontSize": 28,
+   "fontFamily": 1,
+   "text": "Each question = tokens = money.\nCache turns repeat questions\ninto near-zero cost.\nThe 150-400x is multiplication,\nnot magic."
+  }
+ ],
+ "appState": {
+  "gridSize": null,
+  "viewBackgroundColor": "#ffffff"
+ },
+ "files": {}
+}

@@ -1,0 +1,56 @@
+{
+ "title": "streaming",
+ "elements": [
+  {
+   "type": "rectangle",
+   "x": 60,
+   "y": 120,
+   "w": 160,
+   "h": 70,
+   "text": "Server",
+   "fill": "#a5d8ff"
+  },
+  {
+   "type": "rectangle",
+   "x": 380,
+   "y": 120,
+   "w": 160,
+   "h": 70,
+   "text": "Token stream (SSE)",
+   "fill": "#b2f2bb"
+  },
+  {
+   "type": "rectangle",
+   "x": 680,
+   "y": 120,
+   "w": 180,
+   "h": 70,
+   "text": "Reader sees words appear",
+   "fill": "#ffffff"
+  },
+  {
+   "type": "arrow",
+   "x1": 220,
+   "y1": 155,
+   "x2": 380,
+   "y2": 155,
+   "endArrowhead": "arrow"
+  },
+  {
+   "type": "arrow",
+   "x1": 540,
+   "y1": 155,
+   "x2": 680,
+   "y2": 155,
+   "endArrowhead": "arrow"
+  },
+  {
+   "type": "text",
+   "x": 60,
+   "y": 30,
+   "w": 700,
+   "h": 40,
+   "text": "First token ~24ms vs ~1.2s total. Streaming = perceived speed."
+  }
+ ]
+}

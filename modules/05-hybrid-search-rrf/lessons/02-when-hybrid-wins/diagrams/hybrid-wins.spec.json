@@ -1,0 +1,73 @@
+{
+ "title": "hybrid-wins",
+ "elements": [
+  {
+   "type": "rectangle",
+   "x": 60,
+   "y": 60,
+   "w": 200,
+   "h": 70,
+   "text": "One query",
+   "fill": "#a5d8ff"
+  },
+  {
+   "type": "rectangle",
+   "x": 340,
+   "y": 60,
+   "w": 200,
+   "h": 70,
+   "text": "Keyword finds A",
+   "fill": "#ffffff"
+  },
+  {
+   "type": "rectangle",
+   "x": 340,
+   "y": 180,
+   "w": 200,
+   "h": 70,
+   "text": "Semantic finds B",
+   "fill": "#ffffff"
+  },
+  {
+   "type": "rectangle",
+   "x": 680,
+   "y": 120,
+   "w": 220,
+   "h": 70,
+   "text": "Hybrid finds A and B",
+   "fill": "#b2f2bb"
+  },
+  {
+   "type": "arrow",
+   "x1": 260,
+   "y1": 95,
+   "x2": 340,
+   "y2": 95,
+   "endArrowhead": "arrow"
+  },
+  {
+   "type": "arrow",
+   "x1": 260,
+   "y1": 95,
+   "x2": 340,
+   "y2": 215,
+   "endArrowhead": "arrow"
+  },
+  {
+   "type": "arrow",
+   "x1": 540,
+   "y1": 155,
+   "x2": 680,
+   "y2": 155,
+   "endArrowhead": "arrow"
+  },
+  {
+   "type": "text",
+   "x": 60,
+   "y": 300,
+   "w": 700,
+   "h": 40,
+   "text": "Each alone misses half. Fusion = both."
+  }
+ ]
+}

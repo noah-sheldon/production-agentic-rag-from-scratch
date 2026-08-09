@@ -25,6 +25,8 @@ flowchart LR
     COS2 --> FAR["puppy vs printer: 0.1 — unrelated"]
 ```
 
+**Diagram (whiteboard):** open `diagrams/embeddings-map.excalidraw` in excalidraw.com — same picture, traceable by hand.
+
 ## BUILD IT
 
 ```bash

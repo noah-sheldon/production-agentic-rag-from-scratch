@@ -19,6 +19,8 @@ flowchart LR
     M -->|"... token n"| U
 ```
 
+**Diagram (whiteboard):** open `diagrams/streaming.excalidraw` in excalidraw.com — same picture, traceable by hand.
+
 ## BUILD IT
 
 ```bash

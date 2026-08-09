@@ -24,6 +24,8 @@ flowchart TD
     M --> WINNER[which mode wins THIS query]
 ```
 
+**Diagram (whiteboard):** open `diagrams/hybrid-wins.excalidraw` in excalidraw.com — same picture, traceable by hand.
+
 ## BUILD IT
 
 ```bash

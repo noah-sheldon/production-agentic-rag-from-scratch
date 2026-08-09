@@ -1,0 +1,57 @@
+{
+ "title": "chunking",
+ "elements": [
+  {
+   "type": "rectangle",
+   "x": 60,
+   "y": 60,
+   "w": 300,
+   "h": 60,
+   "text": "Whole document",
+   "fill": "#a5d8ff"
+  },
+  {
+   "type": "rectangle",
+   "x": 60,
+   "y": 160,
+   "w": 300,
+   "h": 50,
+   "text": "Section 1",
+   "fill": "#ffffff"
+  },
+  {
+   "type": "rectangle",
+   "x": 60,
+   "y": 230,
+   "w": 300,
+   "h": 50,
+   "text": "Section 2 (with overlap)",
+   "fill": "#ffffff"
+  },
+  {
+   "type": "rectangle",
+   "x": 60,
+   "y": 300,
+   "w": 300,
+   "h": 50,
+   "text": "Section 3",
+   "fill": "#ffffff"
+  },
+  {
+   "type": "arrow",
+   "x1": 360,
+   "y1": 90,
+   "x2": 360,
+   "y2": 160,
+   "endArrowhead": "arrow"
+  },
+  {
+   "type": "text",
+   "x": 430,
+   "y": 60,
+   "w": 480,
+   "h": 200,
+   "text": "Models read a small window.\nCut docs into pieces (chunks).\nOverlap keeps context across cuts.\nChunk size decides quality."
+  }
+ ]
+}

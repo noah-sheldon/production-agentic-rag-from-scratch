@@ -28,6 +28,8 @@ flowchart LR
     S --> T[table: per question + averages]
 ```
 
+**Diagram (whiteboard):** open `diagrams/score.excalidraw` in excalidraw.com — same picture, traceable by hand.
+
 ## BUILD IT
 
 ```bash

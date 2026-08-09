@@ -23,6 +23,8 @@ flowchart LR
     M --> N[next module]
 ```
 
+**Diagram (whiteboard):** open `diagrams/course-gates.excalidraw` in excalidraw.com — same picture, traceable by hand.
+
 ## BUILD IT
 
 ```bash

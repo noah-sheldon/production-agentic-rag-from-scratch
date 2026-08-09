@@ -24,6 +24,8 @@ flowchart LR
     Trim --> Fast["fast, cheap, grounded answer"]
 ```
 
+**Diagram (whiteboard):** open `diagrams/prompt-trim.excalidraw` in excalidraw.com — same picture, traceable by hand.
+
 ## BUILD IT
 
 ```bash

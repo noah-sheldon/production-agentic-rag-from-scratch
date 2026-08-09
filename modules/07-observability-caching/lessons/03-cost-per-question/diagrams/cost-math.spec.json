@@ -1,0 +1,31 @@
+{
+ "title": "cost-math",
+ "elements": [
+  {
+   "type": "rectangle",
+   "x": 60,
+   "y": 60,
+   "w": 260,
+   "h": 90,
+   "text": "1000 questions, uncached",
+   "fill": "#ffc9c9"
+  },
+  {
+   "type": "rectangle",
+   "x": 60,
+   "y": 220,
+   "w": 260,
+   "h": 90,
+   "text": "1000 questions, cached",
+   "fill": "#b2f2bb"
+  },
+  {
+   "type": "text",
+   "x": 400,
+   "y": 60,
+   "w": 500,
+   "h": 200,
+   "text": "Each question = tokens = money.\nCache turns repeat questions\ninto near-zero cost.\nThe 150-400x is multiplication,\nnot magic."
+  }
+ ]
+}

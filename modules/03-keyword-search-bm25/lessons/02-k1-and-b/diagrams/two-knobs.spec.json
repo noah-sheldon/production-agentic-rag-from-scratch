@@ -1,0 +1,48 @@
+{
+ "title": "two-knobs",
+ "elements": [
+  {
+   "type": "rectangle",
+   "x": 60,
+   "y": 120,
+   "w": 160,
+   "h": 70,
+   "text": "BM25 score",
+   "fill": "#a5d8ff"
+  },
+  {
+   "type": "rectangle",
+   "x": 330,
+   "y": 60,
+   "w": 220,
+   "h": 70,
+   "text": "k1: saturation speed",
+   "fill": "#ffffff"
+  },
+  {
+   "type": "rectangle",
+   "x": 330,
+   "y": 180,
+   "w": 220,
+   "h": 70,
+   "text": "b: length penalty",
+   "fill": "#ffffff"
+  },
+  {
+   "type": "text",
+   "x": 60,
+   "y": 30,
+   "w": 700,
+   "h": 40,
+   "text": "k1=0: presence only. b=0: length ignored."
+  },
+  {
+   "type": "text",
+   "x": 600,
+   "y": 60,
+   "w": 420,
+   "h": 120,
+   "text": "Same query, same docs,\nthree settings \u2192\nwatch the ranking change."
+  }
+ ]
+}

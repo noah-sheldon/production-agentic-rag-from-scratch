@@ -29,6 +29,8 @@ flowchart LR
     R --> OUT["answer + per-step breakdown"]
 ```
 
+**Diagram (whiteboard):** open `diagrams/trace.excalidraw` in excalidraw.com — same picture, traceable by hand.
+
 ## BUILD IT
 
 ```bash

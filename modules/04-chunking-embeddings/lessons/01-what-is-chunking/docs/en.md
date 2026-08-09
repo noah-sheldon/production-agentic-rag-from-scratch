@@ -23,6 +23,8 @@ flowchart LR
     C --> R["retriever pulls the right piece"]
 ```
 
+**Diagram (whiteboard):** open `diagrams/chunking.excalidraw` in excalidraw.com — same picture, traceable by hand.
+
 ## BUILD IT
 
 ```bash

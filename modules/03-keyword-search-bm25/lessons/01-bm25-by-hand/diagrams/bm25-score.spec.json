@@ -1,0 +1,90 @@
+{
+ "title": "bm25-score",
+ "elements": [
+  {
+   "type": "rectangle",
+   "x": 60,
+   "y": 60,
+   "w": 170,
+   "h": 70,
+   "text": "Query words",
+   "fill": "#a5d8ff"
+  },
+  {
+   "type": "rectangle",
+   "x": 330,
+   "y": 60,
+   "w": 180,
+   "h": 70,
+   "text": "Term frequency (TF)",
+   "fill": "#ffffff"
+  },
+  {
+   "type": "rectangle",
+   "x": 330,
+   "y": 180,
+   "w": 180,
+   "h": 70,
+   "text": "Rarity (IDF)",
+   "fill": "#ffffff"
+  },
+  {
+   "type": "rectangle",
+   "x": 640,
+   "y": 120,
+   "w": 200,
+   "h": 70,
+   "text": "Score = TF \u00d7 IDF",
+   "fill": "#ffd8a8"
+  },
+  {
+   "type": "rectangle",
+   "x": 900,
+   "y": 120,
+   "w": 180,
+   "h": 70,
+   "text": "Rank by score",
+   "fill": "#b2f2bb"
+  },
+  {
+   "type": "arrow",
+   "x1": 230,
+   "y1": 95,
+   "x2": 330,
+   "y2": 95,
+   "endArrowhead": "arrow"
+  },
+  {
+   "type": "arrow",
+   "x1": 230,
+   "y1": 95,
+   "x2": 330,
+   "y2": 215,
+   "endArrowhead": "arrow"
+  },
+  {
+   "type": "arrow",
+   "x1": 510,
+   "y1": 155,
+   "x2": 640,
+   "y2": 155,
+   "endArrowhead": "arrow"
+  },
+  {
+   "type": "arrow",
+   "x1": 840,
+   "y1": 155,
+   "x2": 900,
+   "y2": 155,
+   "endArrowhead": "arrow"
+  },
+  {
+   "type": "text",
+   "x": 60,
+   "y": 280,
+   "w": 700,
+   "h": 40,
+   "text": "A word in every doc teaches you nothing \u2192 score ~0."
+  }
+ ]
+}

@@ -20,6 +20,8 @@ flowchart LR
     P --> E
 ```
 
+**Diagram (whiteboard):** open `diagrams/parse-formats.excalidraw` in excalidraw.com — same picture, traceable by hand.
+
 ## BUILD IT
 
 ```bash

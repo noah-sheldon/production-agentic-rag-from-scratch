@@ -1,0 +1,49 @@
+{
+ "title": "unified-api",
+ "elements": [
+  {
+   "type": "rectangle",
+   "x": 60,
+   "y": 120,
+   "w": 200,
+   "h": 70,
+   "text": "search(query, mode)",
+   "fill": "#a5d8ff"
+  },
+  {
+   "type": "rectangle",
+   "x": 360,
+   "y": 60,
+   "w": 180,
+   "h": 70,
+   "text": "mode=keyword",
+   "fill": "#ffffff"
+  },
+  {
+   "type": "rectangle",
+   "x": 360,
+   "y": 140,
+   "w": 180,
+   "h": 70,
+   "text": "mode=semantic",
+   "fill": "#ffffff"
+  },
+  {
+   "type": "rectangle",
+   "x": 360,
+   "y": 220,
+   "w": 180,
+   "h": 70,
+   "text": "mode=hybrid",
+   "fill": "#ffffff"
+  },
+  {
+   "type": "text",
+   "x": 600,
+   "y": 120,
+   "w": 400,
+   "h": 120,
+   "text": "One function, three modes,\nthe same result shape.\nCallers never care which."
+  }
+ ]
+}

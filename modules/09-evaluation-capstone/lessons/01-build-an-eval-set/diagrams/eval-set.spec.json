@@ -1,0 +1,56 @@
+{
+ "title": "eval-set",
+ "elements": [
+  {
+   "type": "rectangle",
+   "x": 60,
+   "y": 120,
+   "w": 160,
+   "h": 70,
+   "text": "Questions",
+   "fill": "#a5d8ff"
+  },
+  {
+   "type": "rectangle",
+   "x": 320,
+   "y": 120,
+   "w": 200,
+   "h": 70,
+   "text": "Known-good answers",
+   "fill": "#b2f2bb"
+  },
+  {
+   "type": "rectangle",
+   "x": 640,
+   "y": 120,
+   "w": 220,
+   "h": 70,
+   "text": "Labeled eval set",
+   "fill": "#ffffff"
+  },
+  {
+   "type": "arrow",
+   "x1": 220,
+   "y1": 155,
+   "x2": 320,
+   "y2": 155,
+   "endArrowhead": "arrow"
+  },
+  {
+   "type": "arrow",
+   "x1": 520,
+   "y1": 155,
+   "x2": 640,
+   "y2": 155,
+   "endArrowhead": "arrow"
+  },
+  {
+   "type": "text",
+   "x": 60,
+   "y": 30,
+   "w": 700,
+   "h": 40,
+   "text": "Labeled evals beat vibes. 5 questions is enough to start."
+  }
+ ]
+}

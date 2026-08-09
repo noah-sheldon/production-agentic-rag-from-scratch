@@ -23,6 +23,8 @@ flowchart TD
     M --> P["pick the winner, record it"]
 ```
 
+**Diagram (whiteboard):** open `diagrams/chunk-size.excalidraw` in excalidraw.com — same picture, traceable by hand.
+
 ## BUILD IT
 
 ```bash

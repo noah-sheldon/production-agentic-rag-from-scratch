@@ -1,0 +1,90 @@
+{
+ "title": "parse-formats",
+ "elements": [
+  {
+   "type": "rectangle",
+   "x": 60,
+   "y": 130,
+   "w": 160,
+   "h": 70,
+   "text": "Raw document",
+   "fill": "#a5d8ff"
+  },
+  {
+   "type": "rectangle",
+   "x": 330,
+   "y": 60,
+   "w": 190,
+   "h": 70,
+   "text": "HTML: strip tags",
+   "fill": "#ffffff"
+  },
+  {
+   "type": "rectangle",
+   "x": 330,
+   "y": 150,
+   "w": 190,
+   "h": 70,
+   "text": "Markdown: frontmatter",
+   "fill": "#ffffff"
+  },
+  {
+   "type": "rectangle",
+   "x": 330,
+   "y": 240,
+   "w": 190,
+   "h": 70,
+   "text": "PDF: text layer",
+   "fill": "#ffffff"
+  },
+  {
+   "type": "rectangle",
+   "x": 660,
+   "y": 130,
+   "w": 200,
+   "h": 70,
+   "text": "Title + clean body",
+   "fill": "#b2f2bb"
+  },
+  {
+   "type": "arrow",
+   "x1": 220,
+   "y1": 165,
+   "x2": 330,
+   "y2": 95,
+   "endArrowhead": "arrow"
+  },
+  {
+   "type": "arrow",
+   "x1": 220,
+   "y1": 165,
+   "x2": 330,
+   "y2": 185,
+   "endArrowhead": "arrow"
+  },
+  {
+   "type": "arrow",
+   "x1": 220,
+   "y1": 165,
+   "x2": 330,
+   "y2": 275,
+   "endArrowhead": "arrow"
+  },
+  {
+   "type": "arrow",
+   "x1": 520,
+   "y1": 165,
+   "x2": 660,
+   "y2": 165,
+   "endArrowhead": "arrow"
+  },
+  {
+   "type": "text",
+   "x": 60,
+   "y": 30,
+   "w": 600,
+   "h": 40,
+   "text": "PDF is the worst: text can be drawn as shapes."
+  }
+ ]
+}

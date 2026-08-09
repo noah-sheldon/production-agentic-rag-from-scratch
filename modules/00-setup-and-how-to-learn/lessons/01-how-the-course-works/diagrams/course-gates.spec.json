@@ -1,0 +1,90 @@
+{
+ "title": "course-gates",
+ "elements": [
+  {
+   "type": "rectangle",
+   "x": 60,
+   "y": 140,
+   "w": 180,
+   "h": 70,
+   "text": "Lesson",
+   "fill": "#a5d8ff"
+  },
+  {
+   "type": "rectangle",
+   "x": 330,
+   "y": 60,
+   "w": 200,
+   "h": 70,
+   "text": "Exercises gate",
+   "fill": "#ffffff"
+  },
+  {
+   "type": "rectangle",
+   "x": 330,
+   "y": 150,
+   "w": 200,
+   "h": 70,
+   "text": "Quiz \u2014 human reviews",
+   "fill": "#ffd8a8"
+  },
+  {
+   "type": "rectangle",
+   "x": 330,
+   "y": 240,
+   "w": 200,
+   "h": 70,
+   "text": "Project gate",
+   "fill": "#ffffff"
+  },
+  {
+   "type": "rectangle",
+   "x": 660,
+   "y": 140,
+   "w": 200,
+   "h": 70,
+   "text": "Module done",
+   "fill": "#b2f2bb"
+  },
+  {
+   "type": "arrow",
+   "x1": 240,
+   "y1": 175,
+   "x2": 330,
+   "y2": 95,
+   "endArrowhead": "arrow"
+  },
+  {
+   "type": "arrow",
+   "x1": 240,
+   "y1": 175,
+   "x2": 330,
+   "y2": 185,
+   "endArrowhead": "arrow"
+  },
+  {
+   "type": "arrow",
+   "x1": 240,
+   "y1": 175,
+   "x2": 330,
+   "y2": 275,
+   "endArrowhead": "arrow"
+  },
+  {
+   "type": "arrow",
+   "x1": 530,
+   "y1": 185,
+   "x2": 660,
+   "y2": 175,
+   "endArrowhead": "arrow"
+  },
+  {
+   "type": "text",
+   "x": 60,
+   "y": 30,
+   "w": 500,
+   "h": 40,
+   "text": "Build first. Frameworks second."
+  }
+ ]
+}

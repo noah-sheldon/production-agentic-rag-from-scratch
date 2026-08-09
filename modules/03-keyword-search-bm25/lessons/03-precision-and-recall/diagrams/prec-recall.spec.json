@@ -1,0 +1,48 @@
+{
+ "title": "prec-recall",
+ "elements": [
+  {
+   "type": "ellipse",
+   "x": 60,
+   "y": 60,
+   "w": 220,
+   "h": 160,
+   "text": "Retrieved",
+   "fill": "#a5d8ff"
+  },
+  {
+   "type": "ellipse",
+   "x": 260,
+   "y": 120,
+   "w": 240,
+   "h": 160,
+   "text": "Relevant",
+   "fill": "#ffc9c9"
+  },
+  {
+   "type": "ellipse",
+   "x": 440,
+   "y": 300,
+   "w": 260,
+   "h": 120,
+   "text": "Both = good hits",
+   "fill": "#b2f2bb"
+  },
+  {
+   "type": "text",
+   "x": 60,
+   "y": 440,
+   "w": 700,
+   "h": 40,
+   "text": "Precision = hits/retrieved \u00b7 Recall = hits/relevant"
+  },
+  {
+   "type": "text",
+   "x": 600,
+   "y": 60,
+   "w": 400,
+   "h": 120,
+   "text": "Trade-off: return everything = recall 100%,\nprecision awful."
+  }
+ ]
+}

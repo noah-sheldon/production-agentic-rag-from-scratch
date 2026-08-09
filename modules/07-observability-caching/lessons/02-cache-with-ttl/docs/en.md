@@ -31,6 +31,8 @@ flowchart TD
     S --> A["return fresh answer"]
 ```
 
+**Diagram (whiteboard):** open `diagrams/cache-ttl.excalidraw` in excalidraw.com — same picture, traceable by hand.
+
 ## BUILD IT
 
 ```bash

@@ -22,6 +22,8 @@ flowchart LR
     S --> R[numbers: pass rate, groundedness]
 ```
 
+**Diagram (whiteboard):** open `diagrams/eval-set.excalidraw` in excalidraw.com — same picture, traceable by hand.
+
 ## BUILD IT
 
 ```bash

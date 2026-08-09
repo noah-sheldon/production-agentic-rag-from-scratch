@@ -21,6 +21,8 @@ flowchart LR
     OUT --> APP[app code — never changes]
 ```
 
+**Diagram (whiteboard):** open `diagrams/unified-api.excalidraw` in excalidraw.com — same picture, traceable by hand.
+
 ## BUILD IT
 
 ```bash

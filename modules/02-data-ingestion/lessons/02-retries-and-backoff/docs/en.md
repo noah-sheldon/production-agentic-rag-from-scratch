@@ -19,6 +19,8 @@ flowchart LR
     N -- no --> Fail["mark failed, move on"]
 ```
 
+**Diagram (whiteboard):** open `diagrams/retry-backoff.excalidraw` in excalidraw.com — same picture, traceable by hand.
+
 ## BUILD IT
 
 ```bash

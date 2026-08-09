@@ -20,6 +20,8 @@ flowchart LR
     R --> TOP[top of the merged list]
 ```
 
+**Diagram (whiteboard):** open `diagrams/rrf-fusion.excalidraw` in excalidraw.com — same picture, traceable by hand.
+
 ## BUILD IT
 
 ```bash
