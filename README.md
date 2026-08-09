@@ -1,4 +1,4 @@
-# Applied AI from Scratch
+# Production Agentic RAG from Scratch
 
 > Learn it. Build it. Ship it for others.
 
@@ -57,7 +57,7 @@ SKILL.md. Or clone and run locally:
 ```bash
 git clone https://github.com/noah-sheldon/production-agentic-rag-from-scratch
 cd production-agentic-rag-from-scratch
-python modules/03-keyword-search-bm25/exercises/bm25_by_hand.py   # build it yourself
+cat modules/01-production-infrastructure/README.md   # start module 01
 ```
 
 ## License
