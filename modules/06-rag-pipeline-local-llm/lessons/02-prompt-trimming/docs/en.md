@@ -7,13 +7,13 @@
 Naive RAG stuffs EVERY note into the prompt. With 50 notes that is 1,250 tokens — and with 500 notes, 12,500. The model reads every token before it answers: more tokens, more time, more cost. Worse: the one useful note sits at the bottom of the pile, and a small model never reaches it — it answers from noise and guesses. Fat prompts are not just wasteful. They are wrong.
 
 ## CONCEPT
-The [LLM](../../../../../glossary.md#llm) reads your whole prompt before answering. [Tokens](../../../../../glossary.md#tokens) are the small pieces of words the model counts — every token in the prompt is paid for (cost) and read (latency). So shrink the prompt to what answers the question:
+The [LLM](../../../../../../glossary.md#llm) reads your whole prompt before answering. [Tokens](../../../../../../glossary.md#tokens) are the small pieces of words the model counts — every token in the prompt is paid for (cost) and read (latency). So shrink the prompt to what answers the question:
 
-- **k** — how many [chunks](../../../../../glossary.md#chunk) you retrieve (from module 04).
+- **k** — how many [chunks](../../../../../../glossary.md#chunk) you retrieve (from module 04).
 - **Sentence trim** — inside each chunk, keep only the sentences that contain a question word.
 - **Budget cap** — hard stop: once the prompt hits N tokens, stop adding.
 
-The old way answers slow and wrong; the trimmed way answers fast and right. (The failure of fat prompts is the [needle-in-haystack](../../../../../glossary.md#needle-in-haystack) problem — the fact is there, the model just can't see it.)
+The old way answers slow and wrong; the trimmed way answers fast and right. (The failure of fat prompts is the [needle-in-haystack](../../../../../../glossary.md#needle-in-haystack) problem — the fact is there, the model just can't see it.)
 
 ```mermaid
 flowchart LR

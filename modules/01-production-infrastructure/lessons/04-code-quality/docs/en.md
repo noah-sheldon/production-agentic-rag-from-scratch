@@ -9,12 +9,12 @@ Code that works today breaks tomorrow because of a style slip, a type mistake, o
 ## CONCEPT
 Four different guards, each catching a different class of mistake:
 
-- a [linter](../../../../glossary.md#linter) (Ruff) checks style and catches mistakes before the code runs — unused imports, undefined names, dead code
-- a [formatter](../../../../glossary.md#formatter) rewrites your code to one consistent style, so style debates disappear
-- a [type checker](../../../../glossary.md#type-checker) (MyPy) checks the data types flow correctly — passing a `str` where an `int` is expected
-- a [test](../../../../glossary.md#test) (pytest) checks behavior — the function returns what you promised
+- a [linter](../../../../../glossary.md#linter) (Ruff) checks style and catches mistakes before the code runs — unused imports, undefined names, dead code
+- a [formatter](../../../../../glossary.md#formatter) rewrites your code to one consistent style, so style debates disappear
+- a [type checker](../../../../../glossary.md#type-checker) (MyPy) checks the data types flow correctly — passing a `str` where an `int` is expected
+- a [test](../../../../../glossary.md#test) (pytest) checks behavior — the function returns what you promised
 
-[pre-commit](../../../../glossary.md#pre-commit) is the gatekeeper: it runs the other three automatically before you save a change to git, and blocks the commit when anything fails. Quality becomes a pipeline, not a promise.
+[pre-commit](../../../../../glossary.md#pre-commit) is the gatekeeper: it runs the other three automatically before you save a change to git, and blocks the commit when anything fails. Quality becomes a pipeline, not a promise.
 
 ```mermaid
 flowchart LR

@@ -7,15 +7,15 @@
 You have an eval set now, but you still do not know if your assistant passes it. You spot-check two answers — they look good. That is a vibe again, just with extra steps. You need a number for every question, and one number for the whole set.
 
 ## CONCEPT
-Scoring is a fixed pipeline: for each [eval set](../../../../glossary.md#eval-set) question, retrieve notes, generate an answer, then compare against the [ground truth](../../../../glossary.md#ground-truth) — with numbers.
+Scoring is a fixed pipeline: for each [eval set](../../../../../glossary.md#eval-set) question, retrieve notes, generate an answer, then compare against the [ground truth](../../../../../glossary.md#ground-truth) — with numbers.
 
 Three numbers matter:
 
-- **[Groundedness](../../../../glossary.md#groundedness)** — the share of the answer's words that came from the retrieved notes. An answer full of words that are not in the notes is [hallucinating](../../../../glossary.md#hallucination): making things up.
-- **[Recall](../../../../glossary.md#recall)** — of the notes that SHOULD answer the question, how many did we fetch? If the right note never gets found, no model can answer well.
+- **[Groundedness](../../../../../glossary.md#groundedness)** — the share of the answer's words that came from the retrieved notes. An answer full of words that are not in the notes is [hallucinating](../../../../../glossary.md#hallucination): making things up.
+- **[Recall](../../../../../glossary.md#recall)** — of the notes that SHOULD answer the question, how many did we fetch? If the right note never gets found, no model can answer well.
 - **Pass rate** — the share of questions scored high enough to ship. One number for the whole set.
 
-A [fake LLM](../../../../glossary.md#fake-mode) stands in for the real model: it cannot think, but it lets you run the whole scoring loop without an API key. Run it twice — once honest, once "flaky" — and watch the numbers catch the flaky answers.
+A [fake LLM](../../../../../glossary.md#fake-mode) stands in for the real model: it cannot think, but it lets you run the whole scoring loop without an API key. Run it twice — once honest, once "flaky" — and watch the numbers catch the flaky answers.
 
 ```mermaid
 flowchart LR
@@ -38,7 +38,7 @@ python3 lessons/02-score-your-assistant/code/build.py --flaky  # a model that li
 A tiny BM25 retriever (from module 03, reduced to its bones), a fake LLM with two personalities, and three scoring functions. The `--flaky` run shows two questions with low groundedness — the invented facts are visible as numbers before any user sees them.
 
 ## USE IT
-[RAGAS](../../../../glossary.md#grading) and DeepEval ship these metrics ready-made.
+[RAGAS](../../../../../glossary.md#grading) and DeepEval ship these metrics ready-made.
 
 | Tool gives you | Tool hides from you |
 |---|---|

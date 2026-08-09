@@ -7,7 +7,7 @@
 By now you have two search functions with different names, different inputs, and different output shapes — one returns scores around `1.19`, the other around `0.83`. Your app code forks everywhere: `if query looks exact: keyword; else: semantic`. Adding hybrid means a third branch. This is how search code rots — every caller knows every engine.
 
 ## CONCEPT
-A [unified API](../../../../glossary.md#api) hides the engines behind ONE function. The caller passes a `mode` parameter — `keyword`, `semantic`, or `hybrid` — and gets the same shape back every time: a list of `(score, text)` pairs, best first. Callers never change when an engine changes inside. The `k` (how many results) is a plain parameter. The mode is a choice, not a fork.
+A [unified API](../../../../../glossary.md#api) hides the engines behind ONE function. The caller passes a `mode` parameter — `keyword`, `semantic`, or `hybrid` — and gets the same shape back every time: a list of `(score, text)` pairs, best first. Callers never change when an engine changes inside. The `k` (how many results) is a plain parameter. The mode is a choice, not a fork.
 
 ```mermaid
 flowchart LR

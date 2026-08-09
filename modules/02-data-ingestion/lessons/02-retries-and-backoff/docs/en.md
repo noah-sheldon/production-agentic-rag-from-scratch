@@ -7,7 +7,7 @@
 APIs are not your friend. They rate-limit, they time out, they go down at 3am. Hammer them and you get banned; give up on the first error and your pipeline is broken. The middle path: retry with backoff.
 
 ## CONCEPT
-[Retry](../../../../glossary.md#retry) = try again. [Backoff](../../../../glossary.md#backoff) = wait before retrying, growing the wait each time. Exponential backoff (1s, 2s, 4s, 8s) respects rate limits; adding jitter (randomness) stops a fleet of clients from retrying in sync. The retry budget (max attempts) is the guard that keeps a broken API from hanging your pipeline forever.
+[Retry](../../../../../glossary.md#retry) = try again. [Backoff](../../../../../glossary.md#backoff) = wait before retrying, growing the wait each time. Exponential backoff (1s, 2s, 4s, 8s) respects rate limits; adding jitter (randomness) stops a fleet of clients from retrying in sync. The retry budget (max attempts) is the guard that keeps a broken API from hanging your pipeline forever.
 
 ```mermaid
 flowchart LR

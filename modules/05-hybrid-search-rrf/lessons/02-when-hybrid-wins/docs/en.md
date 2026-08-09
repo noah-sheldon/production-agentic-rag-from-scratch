@@ -7,7 +7,7 @@
 You have two searches. Each fails in its own way. Keyword search misses notes that say the same thing in different words. Semantic search gets fooled by notes that merely LOOK like the question (a one-word tag, a note titled exactly like the query). You need to know, per query, which engine to trust — and how to get both engines' best ideas at once.
 
 ## CONCEPT
-A query falls into one of three camps. **Exact-token queries** — the answer contains the query's own rare words — [keyword search](../../../../glossary.md#bm25) wins. **Meaning queries** — the answer paraphrases the query — [semantic similarity search](../../../../glossary.md#semantic-similarity-search) wins. **Split queries** — two answers, one matches by word, one by meaning — only fusion (RRF, lesson 01) finds both. Recall is the measure: how many of the relevant notes the [retriever](../../../../glossary.md#retriever) actually returned. You cannot know the camp without MEASURING — run the query through all three modes, count what each found.
+A query falls into one of three camps. **Exact-token queries** — the answer contains the query's own rare words — [keyword search](../../../../../glossary.md#bm25) wins. **Meaning queries** — the answer paraphrases the query — [semantic similarity search](../../../../../glossary.md#semantic-similarity-search) wins. **Split queries** — two answers, one matches by word, one by meaning — only fusion (RRF, lesson 01) finds both. Recall is the measure: how many of the relevant notes the [retriever](../../../../../glossary.md#retriever) actually returned. You cannot know the camp without MEASURING — run the query through all three modes, count what each found.
 
 ```mermaid
 flowchart TD

@@ -7,7 +7,7 @@
 A naive script pulls articles, hits a rate limit, crashes — and you re-fetch everything from zero. Half-saved data, duplicate rows, no memory of what it already did. "Run it again" is not a plan.
 
 ## CONCEPT
-An [ingestion pipeline](../../../../glossary.md#ingestion) moves data from sources into your store in small, resumable steps. The difference from a script: each item is tracked (done / failed / pending), failures are retried, and re-running never duplicates. The state lives in the database, not in your head.
+An [ingestion pipeline](../../../../../glossary.md#ingestion) moves data from sources into your store in small, resumable steps. The difference from a script: each item is tracked (done / failed / pending), failures are retried, and re-running never duplicates. The state lives in the database, not in your head.
 
 ```mermaid
 flowchart LR
@@ -27,7 +27,7 @@ python3 lessons/01-what-is-an-ingestion-pipeline/code/build.py
 A plain-Python pipeline: a `done` set persisted to disk, per-item fetch/parse/store steps, and a re-run that skips completed items. Run it twice — the second run does nothing new.
 
 ## USE IT
-[Airflow](../../../../glossary.md#airflow) is the same idea with scheduling, retries, and a UI.
+[Airflow](../../../../../glossary.md#airflow) is the same idea with scheduling, retries, and a UI.
 
 | Airflow gives you | Airflow hides from you |
 |---|---|

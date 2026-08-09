@@ -7,7 +7,7 @@
 You built a keyword search (Module 03) and a semantic search (Module 04). Each returns a ranked list for the same question. Keyword scores look like `9.8, 7.4, 4.1`. Semantic scores look like `0.94, 0.91, 0.85`. How do you merge them into ONE list? If you average the raw numbers, the engine with the bigger scale silently wins — the other list becomes decoration. You need a merge that is fair to both engines.
 
 ## CONCEPT
-[Reciprocal Rank Fusion](../../../../glossary.md#reranking--rank-fusion) (RRF) ignores scores and looks only at POSITIONS. For each list, a document earns `1/(k + rank)` points — rank 1 gets `1/(k+1)`, rank 2 gets `1/(k+2)`, and so on. Points from every list are added. The constant `k` (usually 60) softens the bonus for the very top: rank 1 vs rank 2 differs by only a tiny bit, so no single engine's top pick dominates the vote.
+[Reciprocal Rank Fusion](../../../../../glossary.md#reranking--rank-fusion) (RRF) ignores scores and looks only at POSITIONS. For each list, a document earns `1/(k + rank)` points — rank 1 gets `1/(k+1)`, rank 2 gets `1/(k+2)`, and so on. Points from every list are added. The constant `k` (usually 60) softens the bonus for the very top: rank 1 vs rank 2 differs by only a tiny bit, so no single engine's top pick dominates the vote.
 
 Why does position beat score? Scores from different engines live on different scales — you cannot add meters and kilograms. Worse, one weird score (a document scoring 999) can hijack an average. Positions are fair: every engine votes equally, and a document that BOTH engines rank highly always beats a document only one engine loves.
 
@@ -29,7 +29,7 @@ python3 lessons/01-rrf-by-hand/code/build.py
 A plain-Python `rrf(ranked_lists, k=60)`: loop over each list, give `1/(k+rank)` points, add them up, sort. The build then shows the trap: score averaging lets keyword's `9.8` dwarf semantic's `0.02`, while RRF asks "what did each ENGINE think?" and crowns the document both engines half-agree on.
 
 ## USE IT
-[Elasticsearch](../../../../glossary.md#search-engine) ships RRF natively (called `rank_fusion`). OpenSearch fuses differently — it normalizes scores and adds them, which is arithmetic, not rank-based.
+[Elasticsearch](../../../../../glossary.md#search-engine) ships RRF natively (called `rank_fusion`). OpenSearch fuses differently — it normalizes scores and adds them, which is arithmetic, not rank-based.
 
 | The framework gives you | The framework hides from you |
 |---|---|

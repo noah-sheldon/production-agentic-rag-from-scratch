@@ -7,7 +7,7 @@
 A question like "why does my deploy run at 3am" — exact words. A naive matcher counts words: common words ("the", "run", "is") win, rare useful words get drowned out. You need a score that rewards rare, meaningful matches and ignores filler.
 
 ## CONCEPT
-[BM25](../../../../glossary.md#bm25) scores each document for a query: for every query word, how often does it appear in THIS document (term frequency), scaled by how RARE it is in the whole collection ([IDF](../../../../glossary.md#idf)) — a word in every document teaches you nothing, so it scores ~0. Sum over query words = document score. Rank by score.
+[BM25](../../../../../glossary.md#bm25) scores each document for a query: for every query word, how often does it appear in THIS document (term frequency), scaled by how RARE it is in the whole collection ([IDF](../../../../../glossary.md#idf)) — a word in every document teaches you nothing, so it scores ~0. Sum over query words = document score. Rank by score.
 
 ```mermaid
 flowchart LR
@@ -27,7 +27,7 @@ python3 lessons/01-bm25-by-hand/code/build.py
 BM25 in plain Python on 5 small documents: tokenize, compute IDF, score a query, rank. No libraries. The math is visible line by line.
 
 ## USE IT
-[OpenSearch](../../../../glossary.md#opensearch) ships BM25 out of the box.
+[OpenSearch](../../../../../glossary.md#opensearch) ships BM25 out of the box.
 
 | OpenSearch gives you | OpenSearch hides from you |
 |---|---|

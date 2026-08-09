@@ -1,3 +1,4 @@
+# requires: (none) — server build, run with --selftest
 #!/usr/bin/env python3
 """Lesson 02 build — a health-checked HTTP service from the standard library.
 

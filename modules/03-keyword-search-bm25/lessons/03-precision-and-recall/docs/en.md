@@ -7,7 +7,7 @@
 Your search returns 10 results — 4 are what you wanted. That's a precision problem. Or it returns only 2 of the 7 relevant documents that exist — that's a recall problem. Search feels "fine" until you measure it, and you can't fix what you can't count.
 
 ## CONCEPT
-[Precision](../../../../glossary.md#precision) = relevant returned ÷ total returned. [Recall](../../../../glossary.md#recall) = relevant returned ÷ relevant that exist. They trade off: returning everything gives 100% recall and awful precision; returning one perfect doc gives 100% precision and terrible recall. The right mix depends on the task — a search box wants precision, a RAG retriever wants enough recall that the answer chunk is in the top-k.
+[Precision](../../../../../glossary.md#precision) = relevant returned ÷ total returned. [Recall](../../../../../glossary.md#recall) = relevant returned ÷ relevant that exist. They trade off: returning everything gives 100% recall and awful precision; returning one perfect doc gives 100% precision and terrible recall. The right mix depends on the task — a search box wants precision, a RAG retriever wants enough recall that the answer chunk is in the top-k.
 
 ```mermaid
 flowchart LR

@@ -10,16 +10,16 @@ full latency. You're paying twice for work you already did — and the answer is
 waiting for the model while it could come back in a millisecond.
 
 ## CONCEPT
-A [cache](../../../../glossary.md#cache) is a place that remembers answers.
-The [cache key](../../../../glossary.md#cache-key) is the question (trimmed
+A [cache](../../../../../glossary.md#cache) is a place that remembers answers.
+The [cache key](../../../../../glossary.md#cache-key) is the question (trimmed
 and lowercased so "What is RAG?" and "what is rag?" are the same key). Ask:
-look up the key. A [hit](../../../../glossary.md#hit) — found — returns the
-stored answer and skips the pipeline. A [miss](../../../../glossary.md#miss) —
+look up the key. A [hit](../../../../../glossary.md#hit) — found — returns the
+stored answer and skips the pipeline. A [miss](../../../../../glossary.md#miss) —
 not found — runs the pipeline and stores the answer for next time. A
-[TTL](../../../../glossary.md#ttl-time-to-live) (time-to-live) is the expiry:
+[TTL](../../../../../glossary.md#ttl-time-to-live) (time-to-live) is the expiry:
 after TTL seconds the entry dies and the pipeline runs again. TTL stops stale
 answers and keeps memory from growing forever. The
-[hit rate](../../../../glossary.md#hit-rate) = hits ÷ total questions: 90%
+[hit rate](../../../../../glossary.md#hit-rate) = hits ÷ total questions: 90%
 means 9 of every 10 questions never touch the model.
 
 ```mermaid

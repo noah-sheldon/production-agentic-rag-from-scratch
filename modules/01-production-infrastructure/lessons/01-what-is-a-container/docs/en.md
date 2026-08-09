@@ -7,9 +7,9 @@
 Your code works on your laptop. On the server it crashes — Python version differs, a library is missing, a config file is not there. "It works on my machine" is a real daily cost: hours lost re-fixing the same thing in a new place. The program does not carry its world with it.
 
 ## CONCEPT
-When you run a program, the OS starts a [process](../../../../glossary.md#process) with its own [PID](../../../../glossary.md#pid) and its own memory — but the **same files and settings as every other process**. Two programs can fight over one file, or need different versions of the same tool. That missing [isolation](../../../../glossary.md#isolation) is the root cause.
+When you run a program, the OS starts a [process](../../../../../glossary.md#process) with its own [PID](../../../../../glossary.md#pid) and its own memory — but the **same files and settings as every other process**. Two programs can fight over one file, or need different versions of the same tool. That missing [isolation](../../../../../glossary.md#isolation) is the root cause.
 
-A [container](../../../../glossary.md#container) is that world: its own files, settings, and network [ports](../../../../glossary.md#port), started from a frozen blueprint called an [image](../../../../glossary.md#image). [Docker](../../../../glossary.md#docker) builds and runs boxes; [Docker Compose](../../../../glossary.md#docker-compose) starts many boxes from one config file with one command. Containers share the host kernel — they are not full virtual machines — which is why they start in milliseconds, not minutes.
+A [container](../../../../../glossary.md#container) is that world: its own files, settings, and network [ports](../../../../../glossary.md#port), started from a frozen blueprint called an [image](../../../../../glossary.md#image). [Docker](../../../../../glossary.md#docker) builds and runs boxes; [Docker Compose](../../../../../glossary.md#docker-compose) starts many boxes from one config file with one command. Containers share the host kernel — they are not full virtual machines — which is why they start in milliseconds, not minutes.
 
 ```mermaid
 flowchart LR

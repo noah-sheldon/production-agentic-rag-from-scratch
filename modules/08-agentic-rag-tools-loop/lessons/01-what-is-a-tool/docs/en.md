@@ -7,9 +7,9 @@
 Ask a plain RAG pipeline "what did I write about agents?" and it searches once, guesses once. Now ask "which of my notes mention agents, and what does the evals note say?" — a pipeline cannot open a file, list a folder, or search twice. And a model that cannot read your files will *invent* their contents instead. The model needs hands.
 
 ## CONCEPT
-A [tool / tool definition](../../../../glossary.md#tool--tool-definition) is a small program the model can call. A [tool schema](../../../../glossary.md#tool-schema) is the card that tells the model what the tool is: its `name`, a `description` (when to use it), and its `parameters` (the inputs, and their types). The model never sees your Python code — the schema is all it gets, so the description is the instruction manual.
+A [tool / tool definition](../../../../../glossary.md#tool--tool-definition) is a small program the model can call. A [tool schema](../../../../../glossary.md#tool-schema) is the card that tells the model what the tool is: its `name`, a `description` (when to use it), and its `parameters` (the inputs, and their types). The model never sees your Python code — the schema is all it gets, so the description is the instruction manual.
 
-A [tool registry](../../../../glossary.md#tool-registry) is one dict that holds every tool by name: look up `"search_notes"`, get its schema and its function. The model asks for a tool by name; your code looks it up, checks the arguments, runs the function, and hands the result back.
+A [tool registry](../../../../../glossary.md#tool-registry) is one dict that holds every tool by name: look up `"search_notes"`, get its schema and its function. The model asks for a tool by name; your code looks it up, checks the arguments, runs the function, and hands the result back.
 
 ```mermaid
 flowchart LR

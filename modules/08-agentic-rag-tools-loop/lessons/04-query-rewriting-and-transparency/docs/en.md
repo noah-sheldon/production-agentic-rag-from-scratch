@@ -7,9 +7,9 @@
 "agents stuff" is how humans actually talk to a search box, and it searches terribly. And the worst kind of query is the *pointer*: "the one about evals" — nothing to search at all unless you remember the previous topic. Meanwhile the agent acts like a black box: it called search twice and nobody knows why. Two fixes: rewrite the query before it searches, and log every decision so the run is explainable.
 
 ## CONCEPT
-[Query rewriting](../../../../glossary.md#query-rewriting) (the course's [query translation](../../../../glossary.md#query-translation)) fixes the question before retrieval: cut filler words, turn "the one about X" into X, and resolve pronouns ("it", "this") from the conversation's last topic. Cheap heuristics beat nothing — a rewritten query is measurable: it retrieves the right note.
+[Query rewriting](../../../../../glossary.md#query-rewriting) (the course's [query translation](../../../../../glossary.md#query-translation)) fixes the question before retrieval: cut filler words, turn "the one about X" into X, and resolve pronouns ("it", "this") from the conversation's last topic. Cheap heuristics beat nothing — a rewritten query is measurable: it retrieves the right note.
 
-[Reasoning transparency](../../../../glossary.md#reasoning-transparency) is the opposite of the black box: every decision the agent makes is written to a [decision log](../../../../glossary.md#decision-log) — what was called, why, with what score. A run becomes a story you can read top to bottom. This is the same idea as the [trace](../../../../glossary.md#trace) from module 07, built by hand.
+[Reasoning transparency](../../../../../glossary.md#reasoning-transparency) is the opposite of the black box: every decision the agent makes is written to a [decision log](../../../../../glossary.md#decision-log) — what was called, why, with what score. A run becomes a story you can read top to bottom. This is the same idea as the [trace](../../../../../glossary.md#trace) from module 07, built by hand.
 
 ```mermaid
 flowchart LR

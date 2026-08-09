@@ -10,15 +10,15 @@ or what 1,000 questions will cost next month. You're flying blind on money —
 and the finance person will ask.
 
 ## CONCEPT
-[Tokens](../../../../glossary.md#tokens) are the currency. A naive count:
+[Tokens](../../../../../glossary.md#tokens) are the currency. A naive count:
 4 characters ≈ 1 token. One model call costs input tokens × input price plus
 output tokens × output price, where prices are per 1 million tokens. Retrieval
-(the embedding) is cheap; the [LLM API call](../../../../glossary.md#llm-api-call)
+(the embedding) is cheap; the [LLM API call](../../../../../glossary.md#llm-api-call)
 is expensive — with the pricing table in this lesson it's 150-400x the
 retrieval cost. A cache hit uses 0 tokens. So on 1,000 questions where most
-are repeats, the average [cost per question](../../../../glossary.md#cost-per-question)
+are repeats, the average [cost per question](../../../../../glossary.md#cost-per-question)
 collapses — and that's the whole point of the
-[dashboard](../../../../glossary.md#dashboard) you'll build.
+[dashboard](../../../../../glossary.md#dashboard) you'll build.
 
 ```mermaid
 flowchart LR

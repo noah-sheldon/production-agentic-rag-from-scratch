@@ -9,12 +9,12 @@ search? The prompt? The model? Without a timer around each step you guess.
 Guessing is how you optimize the wrong thing and ship a fix for nothing.
 
 ## CONCEPT
-A [trace](../../../../glossary.md#trace) is a recorded log of every step of one
+A [trace](../../../../../glossary.md#trace) is a recorded log of every step of one
 request: name, start, end, duration. A RAG answer has three steps:
-[retrieve](../../../../glossary.md#retriever) (find the chunks), prompt (build
-the [prompt template](../../../../glossary.md#prompt-template)), and answer
-(the [LLM API call](../../../../glossary.md#llm-api-call)). Wrap each step in a
-named timer — that's [observability](../../../../glossary.md#observability):
+[retrieve](../../../../../glossary.md#retriever) (find the chunks), prompt (build
+the [prompt template](../../../../../glossary.md#prompt-template)), and answer
+(the [LLM API call](../../../../../glossary.md#llm-api-call)). Wrap each step in a
+named timer — that's [observability](../../../../../glossary.md#observability):
 you can *see* the system. Now you get a per-step breakdown: retrieve 30 ms,
 prompt 5 ms, answer 20 ms. The breakdown shows where the time goes — usually
 the model, sometimes the search. The fix targets the slow step, not the one
@@ -43,7 +43,7 @@ names itself.
 ## USE IT
 [Langfuse](https://langfuse.com) records the same thing for you at scale: one
 decorator wraps any function and it becomes a traced
-[span](../../../../glossary.md#span) in a web UI, with latency and cost per
+[span](../../../../../glossary.md#span) in a web UI, with latency and cost per
 call.
 
 | Langfuse gives you | Langfuse hides from you |

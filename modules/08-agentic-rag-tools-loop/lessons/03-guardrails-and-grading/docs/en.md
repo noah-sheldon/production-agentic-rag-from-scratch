@@ -7,9 +7,9 @@
 An agent with tools will happily search your notes for "best pizza in London" — and answer from *nothing*, confidently. Worse, it can answer from the *wrong* note: the word "agents" appears in your python note, so it gets retrieved, and the agent builds a confident answer on the wrong document. Two different failures: the question is out of bounds, and the evidence is off-topic. One guardrail, one grade.
 
 ## CONCEPT
-A [guardrail](../../../../glossary.md#guardrail) is a rule that stops the flow when the input is out of bounds. For a notes assistant the domain is your knowledge: [out-of-domain](../../../../glossary.md#out-of-domain) means the question names no topic you have notes on. The guardrail checks the question against the domain *before any tool runs* — reject early, with a reason.
+A [guardrail](../../../../../glossary.md#guardrail) is a rule that stops the flow when the input is out of bounds. For a notes assistant the domain is your knowledge: [out-of-domain](../../../../../glossary.md#out-of-domain) means the question names no topic you have notes on. The guardrail checks the question against the domain *before any tool runs* — reject early, with a reason.
 
-[Grading](../../../../glossary.md#grading) checks the other side: each document a search returns is scored for how well it answers the query, then labeled [relevant or irrelevant](../../../../glossary.md#relevant--irrelevant). Only relevant documents may reach the prompt. In module 06 you graded the *answer*; here you grade the *evidence*, before the model ever sees it.
+[Grading](../../../../../glossary.md#grading) checks the other side: each document a search returns is scored for how well it answers the query, then labeled [relevant or irrelevant](../../../../../glossary.md#relevant--irrelevant). Only relevant documents may reach the prompt. In module 06 you graded the *answer*; here you grade the *evidence*, before the model ever sees it.
 
 ```mermaid
 flowchart LR

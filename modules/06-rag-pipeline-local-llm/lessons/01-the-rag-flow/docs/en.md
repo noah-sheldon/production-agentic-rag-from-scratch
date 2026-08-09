@@ -7,13 +7,13 @@
 Your notes are about deploy, embeddings, Ollama — fifty of them, growing. You ask the model: "how do I run a local model?" The model has never seen your notes. Paste nothing → it makes things up. Paste everything → slow, expensive, and the useful note gets buried in noise. Both ways fail. The fix is not a bigger prompt. The fix is a flow.
 
 ## CONCEPT
-[RAG](../../../../../glossary.md#rag) is a three-step flow that lets the model answer from YOUR notes:
+[RAG](../../../../../../glossary.md#rag) is a three-step flow that lets the model answer from YOUR notes:
 
-1. **Retrieve** — search your notes for the pieces that match the question. You already built the search in module 03 (keyword / BM25). The [retriever](../../../../../glossary.md#retriever) picks the top [k](../../../../../glossary.md#k) notes.
-2. **Prompt** — pack the found pieces (the context) and the question into one instruction, using a [prompt template](../../../../../glossary.md#prompt-template).
-3. **Answer** — the [LLM](../../../../../glossary.md#llm) reads the prompt — everything inside its [context window](../../../../../glossary.md#context-window) — and answers from the context only.
+1. **Retrieve** — search your notes for the pieces that match the question. You already built the search in module 03 (keyword / BM25). The [retriever](../../../../../../glossary.md#retriever) picks the top [k](../../../../../../glossary.md#k) notes.
+2. **Prompt** — pack the found pieces (the context) and the question into one instruction, using a [prompt template](../../../../../../glossary.md#prompt-template).
+3. **Answer** — the [LLM](../../../../../../glossary.md#llm) reads the prompt — everything inside its [context window](../../../../../../glossary.md#context-window) — and answers from the context only.
 
-An answer that comes from your notes is **grounded**. When no note matches, the honest reply is "I don't know" — that is how grounding stops [hallucination](../../../../../glossary.md#hallucination).
+An answer that comes from your notes is **grounded**. When no note matches, the honest reply is "I don't know" — that is how grounding stops [hallucination](../../../../../../glossary.md#hallucination).
 
 ```mermaid
 flowchart LR
@@ -42,7 +42,7 @@ question: how do I run a local model?
 Try your own questions. Ask something that is in no note and watch it refuse instead of inventing an answer — that refusal is the whole point of grounding.
 
 ## USE IT
-[Ollama](../../../../../glossary.md#ollama) runs a real local model on your own machine. The flow does not change — only the model does. Pull a small model and talk to it:
+[Ollama](../../../../../../glossary.md#ollama) runs a real local model on your own machine. The flow does not change — only the model does. Pull a small model and talk to it:
 
 ```bash
 ollama pull llama3.2:1b        # once, downloads a small model

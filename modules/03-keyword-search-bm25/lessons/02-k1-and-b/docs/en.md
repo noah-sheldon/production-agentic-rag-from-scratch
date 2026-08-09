@@ -7,7 +7,7 @@
 BM25 scored your search — but two documents match equally, and the ranking feels wrong. A long doc repeats a word 10 times; a short one says it once. Who wins? And when does a word appearing 20 times deserve less credit per appearance than the 1st time? Two knobs answer both.
 
 ## CONCEPT
-[k1](../../../../glossary.md#k1) controls term-frequency saturation: at k1=0, only presence matters (word there = yes/no); higher k1 lets more repetitions add score, but each extra one pays less. [b](../../../../glossary.md#b) controls length normalization: at b=0, length is ignored; at b=1, long documents are fully penalized. Defaults (1.2, 0.75) work for most text — but your documents (short notes vs long papers) may want different values.
+[k1](../../../../../glossary.md#k1) controls term-frequency saturation: at k1=0, only presence matters (word there = yes/no); higher k1 lets more repetitions add score, but each extra one pays less. [b](../../../../../glossary.md#b) controls length normalization: at b=0, length is ignored; at b=1, long documents are fully penalized. Defaults (1.2, 0.75) work for most text — but your documents (short notes vs long papers) may want different values.
 
 ```mermaid
 flowchart LR
