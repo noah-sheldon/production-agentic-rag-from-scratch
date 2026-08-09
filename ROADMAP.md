@@ -1,6 +1,6 @@
 # Roadmap — Production Agentic RAG, from scratch (9 modules)
 
-Nine modules. Every module: lessons (Six Beats, build-first) + **2-3 exercises**
+Ten modules (0-9). Every module: lessons (Six Beats, build-first) + **2-3 exercises**
 + **a weekly quiz (human-reviewed)** + **a project (your own)**. Projects gate
 modules. No week/day pressure — move at your own pace.
 
