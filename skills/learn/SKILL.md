@@ -26,11 +26,16 @@ Raw base: `https://raw.githubusercontent.com/noah-sheldon/production-agentic-rag
 ## The loop
 
 1. **Locate** — read LEARNING.md; find the next `To Do` module and its first lesson.
-2. **Recall** — ask what the previous lesson shipped. If blank, re-teach its MOTTO.
+2. **Recall** — ask what the PREVIOUS lesson shipped, but ONLY if a previous
+   lesson's quiz is human-approved in the log. If this is the first lesson, or
+   the current lesson has NO human-approved quiz in the log — **it has not been
+   taught. Teach the full Six Beats now (step 3), then quiz (step 4).** A
+   progress-log entry alone NEVER marks a lesson as taught or done.
 3. **Teach** — walk the Six Beats in order, build-first:
    - MOTTO → PROBLEM → CONCEPT (diagram-first: describe the mermaid, point to
      the excalidraw file) → BUILD IT (learner runs the code, line by line —
      never read-only) → USE IT (honest trade-offs) → SHIP IT (the artifact).
+   Never quiz before teaching the current lesson's beats.
 4. **Quiz — human-in-the-loop** — 3 questions from the lesson. The learner
    answers, then a HUMAN reviews and approves. No auto-pass. Wrong answer →
    re-teach from first principles, re-ask after the human decides.
