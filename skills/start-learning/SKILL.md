@@ -1,6 +1,6 @@
 ---
 name: start-learning
-description: One-time onboarding for the Applied AI from Scratch course — placement + personalized path
+description: One-time onboarding for the Production Agentic RAG from Scratch course — placement + personalized path
 ---
 
 # /start-learning
