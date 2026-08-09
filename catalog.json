@@ -2,10 +2,22 @@
   "modules": [
     {
       "module": "00-setup-and-how-to-learn",
-      "lessons": [],
-      "exercises": [],
+      "lessons": [
+        {
+          "lesson": "01-how-the-course-works",
+          "docs": true,
+          "code": [
+            "build.py"
+          ],
+          "artifact": true
+        }
+      ],
+      "exercises": [
+        "01_exercises.py",
+        "02_solutions.py"
+      ],
       "quiz": true,
-      "project": false
+      "project": true
     },
     {
       "module": "01-production-infrastructure",
@@ -339,5 +351,5 @@
       "project": true
     }
   ],
-  "lesson_count": 29
+  "lesson_count": 30
 }
