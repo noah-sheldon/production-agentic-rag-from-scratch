@@ -19,6 +19,9 @@ def run(cmd):
         return False, ""
 
 
+REPO_ROOT = Path(__file__).resolve().parents[2]
+
+
 def main() -> None:
     print("=" * 60)
     print("Setup check — Production Agentic RAG from Scratch")
@@ -27,12 +30,8 @@ def main() -> None:
 
     # Python
     ok, ver = run([sys.executable, "--version"])
-    results.append(("Python 3.12+", ok, ver or "install python.org/downloads"))
-    try:
-        v = sys.version_info
-        results[-1] = ("Python 3.12+", (v.major, v.minor) >= (3, 12), ver)
-    except Exception:
-        pass
+    v = sys.version_info
+    results.append(("Python 3.12+", (v.major, v.minor) >= (3, 12), ver))
 
     # git
     ok, ver = run(["git", "--version"])
@@ -43,11 +42,10 @@ def main() -> None:
     results.append(("Docker", ok, ver or "install Docker Desktop"))
 
     # Repo cloned (we are inside it)
-    results.append(("Course repo", (Path(__file__).resolve().parent.parent).exists(),
-                    "clone the repo first"))
+    results.append(("Course repo", (REPO_ROOT / ".git").exists(), "clone the repo first"))
 
     # Tutor skill files present
-    skills = Path(__file__).resolve().parent.parent / "skills"
+    skills = REPO_ROOT / "skills"
     has_skills = (skills / "start-learning" / "SKILL.md").exists() and \
                  (skills / "learn" / "SKILL.md").exists()
     results.append(("Tutor skills", has_skills,
