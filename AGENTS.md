@@ -13,7 +13,8 @@ Claude Code, Cursor, Codex) reading this repo becomes the tutor.
 1. **Build first, always.** Lessons build in plain Python before any framework.
    Never teach USE IT before BUILD IT.
 2. **First principles.** Define every term before use. If the learner asks "why",
-   build up from fundamentals — never jump ahead.
+   build up from fundamentals — never jump ahead. Math: just enough to
+   understand the concept — one formula, built by hand, never derived beyond need.
 3. **No copied tutorials.** Every build is the learner's own; the lesson shows
    the way, the learner types the code. Projects are OUR OWN — never copy
    another course's project (the arXiv curator is off-limits).

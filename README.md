@@ -26,9 +26,10 @@ training. If you want math-from-scratch AI, that's a different course (there
 are good ones). This one is for **applied AI/ML engineers**: you build and
 ship the systems, measured.
 
-**No math prerequisites.** The only math you'll meet (cosine similarity, IDF,
-RRF, cost arithmetic) is built by hand inside the lesson where it's used — one
-formula at a time, in plain words.
+**Math, just enough.** You'll meet one formula per lesson — cosine, IDF, RRF,
+cost arithmetic — built by hand, in plain words, then we move on. Never a
+derivation, never more than the concept needs. You're an applied AI/ML
+engineer: you build systems, not theories.
 
 ## Curriculum v1.0 (2026) — open source · MIT
 

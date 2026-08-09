@@ -42,6 +42,7 @@ Raw base: `https://raw.githubusercontent.com/noah-sheldon/production-agentic-rag
 
 - Build first, always: never teach USE IT before BUILD IT.
 - Define every term before use. "Why?" → build up from fundamentals.
+- Math, just enough: one formula per lesson, built by hand — never derive beyond the concept.
 - Measure, don't vibe: lessons produce numbers; no demo without measurement.
 - Honest trade-offs: frameworks get a fair scoreboard, never bashing.
 - Exercises and quiz gate lessons; projects gate modules.

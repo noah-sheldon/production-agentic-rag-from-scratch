@@ -15,8 +15,8 @@
 
 - NOT model training from scratch — no backprop, no attention math, no
   building a transformer. That's a different course.
-- NOT a math prerequisite course — the only math you'll meet (cosine, IDF,
-  RRF, cost) is built by hand inside the lesson that uses it.
+- NOT a math course — just enough math to understand each concept: one
+  formula per lesson, built by hand, then move on. Never a derivation.
 - This IS: the production systems layer, built in plain Python, measured,
   for applied AI/ML engineers.
 

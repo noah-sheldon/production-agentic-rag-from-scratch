@@ -6,8 +6,8 @@ modules. No week/day pressure — move at your own pace.
 
 Scope: **production Agentic RAG only — the applied systems layer.** Systems
 from scratch (retrieval, loop, evaluation in plain Python), not models — no
-backprop, no attention math, no training. No math prerequisites; the one
-formula per lesson is built by hand where it's used. Agent design patterns
+backprop, no attention math, no training. Math, just enough: one
+formula per lesson, built by hand where it's used — never a derivation. Agent design patterns
 (goal-driven, result-driven) live in a future course/series — not here.
 
 ## The modules (build YOUR personal knowledge assistant)
