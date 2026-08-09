@@ -80,7 +80,7 @@ def collect_health() -> dict:
     status = "ok" if all(state == "up" for state in required) else "degraded"
     return {
         "status": status,
-        "service": "arxiv-curator-skeleton",
+        "service": "knowledge-assistant-skeleton",
         "checks": checks,
         "todos_remaining": TODO_COUNT,
     }
@@ -103,7 +103,7 @@ class HealthHandler(BaseHTTPRequestHandler):
             self._send_json(status, health)
         elif path == "/docs":
             html = """<!doctype html>
-<html><head><title>arXiv curator skeleton — docs stub</title></head>
+<html><head><title>Knowledge assistant skeleton — docs stub</title></head>
 <body><h1>Docs (stdlib stub — FastAPI will generate this)</h1>
 <ul><li>GET /health — every service's state in one answer</li>
 <li>GET /docs — this page</li></ul>
@@ -123,7 +123,7 @@ class HealthHandler(BaseHTTPRequestHandler):
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="arxiv curator skeleton")
+    parser = argparse.ArgumentParser(description="knowledge assistant skeleton")
     parser.add_argument("--port", type=int, default=8000)
     parser.add_argument("--once", action="store_true", help="print health and exit")
     args = parser.parse_args()
@@ -133,7 +133,7 @@ def main() -> None:
         return
 
     server = ThreadingHTTPServer(("0.0.0.0", args.port), HealthHandler)
-    print(f"arxiv-curator skeleton on http://0.0.0.0:{args.port}/health")
+    print(f"knowledge-assistant skeleton on http://0.0.0.0:{args.port}/health")
     print(f"probes -> db {DB_HOST}:{DB_PORT} | search {SEARCH_URL} | llm {LLM_URL}")
     print(f"TODOs remaining: {TODO_COUNT} (see the header of app.py)")
     server.serve_forever()

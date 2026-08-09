@@ -1,6 +1,6 @@
 # Module 01 Project — Service Skeleton
 
-**Goal:** stand up the full service skeleton for the arXiv paper curator —
+**Goal:** stand up the service skeleton for YOUR personal knowledge assistant —
 compose file, FastAPI app with health + docs, PostgreSQL, OpenSearch, and
 Ollama — all running locally, with the health of every service visible in one
 command. This is the foundation every later module plugs into.

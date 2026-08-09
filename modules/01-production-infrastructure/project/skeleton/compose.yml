@@ -1,4 +1,4 @@
-# Module 01 project skeleton — the arXiv paper curator, all local.
+# Module 01 project skeleton — your personal knowledge assistant, all local.
 #
 #   docker compose up -d
 #   docker compose ps        # health of every service, one command
@@ -17,7 +17,7 @@
 #   [ ] Re-enable OpenSearch security for anything beyond local development.
 #   [ ] Add a `.env` file instead of plaintext passwords (never commit .env).
 
-name: arxiv-curator
+name: knowledge-assistant
 
 services:
   app:

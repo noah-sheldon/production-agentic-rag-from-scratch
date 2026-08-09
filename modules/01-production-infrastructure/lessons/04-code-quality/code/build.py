@@ -19,7 +19,7 @@ from dataclasses import dataclass
 
 @dataclass
 class Paper:
-    """One paper in the curator's library."""
+    """One note in your knowledge library."""
 
     slug: str
     year: int
