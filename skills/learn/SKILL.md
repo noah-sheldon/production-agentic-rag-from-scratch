@@ -43,6 +43,17 @@ Raw base: `https://raw.githubusercontent.com/noah-sheldon/production-agentic-rag
      (mandatory: the learner RUNS the code, line by line, never read-only —
      if they can't run Python, finish Module 0 first) → USE IT (honest
      trade-offs) → SHIP IT (the artifact).
+
+   **BUILD IT, taught properly — the code must be UNDERSTOOD, not just run:**
+   - Open `code/build.py` with the learner. Walk it SECTION BY SECTION, line by
+     line, in plain words: what each function does, what each variable means,
+     why each step exists. Never assume they read code fluently.
+   - **Predict-then-run:** before they execute, ask "what do you expect to see?"
+     They run it, compare, and explain the output back to you.
+   - If they can't explain what the code does or what they saw, RE-TEACH that
+     section from first principles — never move on with "it ran".
+   - Every lesson's build code must be simple enough to walk this way (stdlib,
+     one idea per function) — if it isn't, flag the lesson for a rewrite.
    Never quiz before teaching the current lesson's beats.
 4. **Quiz — human-in-the-loop** — 3 questions from the lesson. The learner
    answers, then a HUMAN reviews and approves. No auto-pass. Wrong answer →
