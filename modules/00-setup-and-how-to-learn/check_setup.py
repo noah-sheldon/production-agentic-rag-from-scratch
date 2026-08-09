@@ -42,14 +42,13 @@ def main() -> None:
     results.append(("Docker", ok, ver or "install Docker Desktop"))
 
     # Repo cloned (we are inside it)
-    results.append(("Course repo", (REPO_ROOT / ".git").exists(), "clone the repo first"))
+    results.append(("Course repo", (REPO_ROOT / ".git").exists(), "ok"))
 
     # Tutor skill files present
     skills = REPO_ROOT / "skills"
     has_skills = (skills / "start-learning" / "SKILL.md").exists() and \
                  (skills / "learn" / "SKILL.md").exists()
-    results.append(("Tutor skills", has_skills,
-                    "repo is missing skills/ — re-clone"))
+    results.append(("Tutor skills", has_skills, "ok"))
 
     print(f"\n{'CHECK':<14}{'STATUS':<10}DETAIL")
     print("-" * 60)
