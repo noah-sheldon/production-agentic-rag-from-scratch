@@ -1,6 +1,7 @@
 # Module 06 — RAG Pipeline + Local LLM
 
 **Topics:** Ollama local LLM · prompt trimming · streaming (SSE) · local vs cloud.
+**Math you'll meet:** Token arithmetic only — counting and prompt size.
 
 **Build first:** the RAG answer flow in plain Python — retrieve, prompt, answer — with a stand-in model, no API keys. See the flow work before any server exists.
 

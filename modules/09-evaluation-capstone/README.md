@@ -1,6 +1,7 @@
 # Module 09 — Evaluation + Capstone
 
 **Topics:** eval question set (labeled, known-good answers) · scoring (groundedness, recall, pass rate) · the grade gate (pass / retry / fallback) · publishing (repo, README, video plan).
+**Math you'll meet:** Scoring arithmetic — groundedness and recall as ratios.
 
 **Build first:** build an eval set by hand as JSON with known-good answers — then score a RAG-style flow with a fake LLM and watch the numbers, then put a grade gate in front of it that refuses to ship bad answers. No eval framework, no judge model — the ruler and the gate are yours before anything imported.
 

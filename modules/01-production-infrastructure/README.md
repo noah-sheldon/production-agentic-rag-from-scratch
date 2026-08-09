@@ -1,6 +1,7 @@
 # Module 01 — Production Infrastructure
 
 **Topics:** Docker Compose · FastAPI (async, docs, health checks) · PostgreSQL · OpenSearch · Ollama · service orchestration · code quality (UV, Ruff, MyPy, pre-commit).
+**Math you'll meet:** None — concepts and commands only.
 
 **Build first:** a plain-Python service with a health endpoint before FastAPI touches it. Understand what each infra piece does before you wire it.
 

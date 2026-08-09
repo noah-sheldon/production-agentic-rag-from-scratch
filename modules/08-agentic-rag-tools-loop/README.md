@@ -1,6 +1,7 @@
 # Module 08 — Agentic RAG: Tools + the Loop
 
 **Topics:** tool design · the tool registry (list/search/read) · tool schema (name, description, params) · tool calling · the agent loop (decide → call → result → repeat) · max turns · guardrails (out-of-domain rejection) · document grading (relevant/irrelevant) · query rewriting · reasoning transparency.
+**Math you'll meet:** None — logic only (loops, guards, grading).
 
 **Build first:** tools and the loop in plain Python — a hand-rolled tool registry over your notes, a loop that calls a model and runs its tool calls (raw HTTP, with a FAKE mode that runs keyless), guardrails and grading by hand, then query rewriting with a decision log. Own the loop, then import the graph.
 

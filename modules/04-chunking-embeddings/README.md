@@ -1,6 +1,7 @@
 # Module 04 — Chunking + Embeddings
 
 **Topics:** section vs fixed-size chunking · chunk overlap · embeddings (the 384 numbers) · cosine similarity by hand · embedding fallbacks.
+**Math you'll meet:** Cosine similarity, 3 lines, by hand in lesson 02. No vector-math prerequisites.
 
 **Build first:** chunk a document by sections in plain Python; make a 384-number embedding by hand and rank vectors by cosine similarity with no ML libraries — closeness shows up even with random vectors; then chunk the same text at 3 sizes and watch the trade.
 

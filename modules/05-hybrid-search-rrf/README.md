@@ -1,6 +1,7 @@
 # Module 05 — Hybrid Search (RRF)
 
 **Topics:** Reciprocal Rank Fusion (RRF) · keyword + semantic search together · when hybrid wins (and when it doesn't) · one unified search API.
+**Math you'll meet:** RRF fusion — rank arithmetic only (1/(k+rank)).
 
 **Build first:** fuse two ranked lists — one from keyword search, one from semantic search — with RRF in plain Python. See why merging by *position* beats merging by *score*.
 

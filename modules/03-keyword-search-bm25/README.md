@@ -1,6 +1,7 @@
 # Module 03 — Keyword Search First (BM25)
 
 **Topics:** why keyword search is the foundation · OpenSearch index/mappings · BM25 math · Query DSL (filters, boosting) · search analytics (precision, recall, relevance).
+**Math you'll meet:** One formula, by hand in lesson 01: IDF (arithmetic + log). k1 and b are two knobs, not theorems.
 
 **Build first:** BM25 by hand in plain Python on a few documents — understand the formula, then import the engine.
 

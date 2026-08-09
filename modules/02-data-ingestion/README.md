@@ -1,6 +1,7 @@
 # Module 02 — Data Ingestion
 
 **Topics:** API ingestion (rate limiting, retries) · article/PDF parsing · Airflow pipelines · metadata extraction · API → database flow.
+**Math you'll meet:** None — logic only (retries, parsing, idempotency).
 
 **Build first:** fetch an article or note from any source in plain Python with retry logic — no client library. See what rate limits and backoff actually do.
 

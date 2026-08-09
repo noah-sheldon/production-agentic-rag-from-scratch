@@ -1,6 +1,7 @@
 # Module 07 — Observability & Caching
 
 **Topics:** tracing · cache + TTL · cost per question · dashboards.
+**Math you'll meet:** Cost arithmetic — per-question pricing, TTL expiry. The 150-400x math is multiplication.
 
 **Build first:** time and log every step of a RAG answer in plain Python — a
 per-step breakdown — before any tracing tool. Build a dict cache with TTL and

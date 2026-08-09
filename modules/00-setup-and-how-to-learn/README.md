@@ -1,6 +1,7 @@
 # Module 00 — Setup & How to Learn
 
 **Goal:** your machine ready, the tutor installed, and you know how this course works. No AI knowledge needed to start — only following steps.
+**Math you'll meet:** None — setup only.
 
 ## Topics
 
