@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Module 01 — solutions to the four exercises.
+"""Module 01 — solutions to the three exercises.
 
 Run:  python3 02_solutions.py
 
@@ -59,7 +59,8 @@ def exercise1() -> bool:
     with tempfile.NamedTemporaryFile("w", suffix=".yml", delete=False) as fh:
         fh.write(COMPOSE_SOLUTION)
         path = fh.name
-    result = subprocess.run(["docker", "compose", "-f", path, "config", "-q"], capture_output=True, text=True)
+    result = subprocess.run(["docker", "compose", "-f", path, "config", "-q"],
+                            capture_output=True, text=True)
     print(f"\ncheck: docker compose config -q -> {'VALID' if result.returncode == 0 else result.stderr.strip()}")
     return result.returncode == 0
 
@@ -127,10 +128,6 @@ def exercise2() -> bool:
     print("explanation (why_health_checks_exist):")
     print(why_health_checks_exist)
     print()
-
-    # Run the same probe the exercise gate runs, against the solution inline.
-    # __name__ is set to a non-main value so the solution's own server block
-    # does not start (we probe it ourselves on an ephemeral port).
     namespace: dict = {"__name__": "health_server_solution"}
     exec(compile(health_server_solution, "health_server.py", "exec"), namespace)
     Handler = namespace["HealthHandler"]
@@ -163,7 +160,7 @@ def exercise2() -> bool:
 
 
 # ==========================================================================
-# EXERCISE 3 — diagram the services and what each owns
+# EXERCISE 3 — diagram the services + FastAPI docs
 # ==========================================================================
 
 SERVICES = {
@@ -187,6 +184,16 @@ flowchart LR
 ```
 """
 
+docs_explanation = """\
+/docs generates an interactive Swagger UI straight from the code: every route,
+its parameters, and its response shape come from the function signatures and
+docstrings. Underneath it is /openapi.json, a machine-readable JSON spec that
+tools (clients, test generators, SDKs) consume without a human. Docs are
+generated from code rather than written by hand because the code is the single
+source of truth — when the endpoint changes, the docs change with it, so the
+docs can never silently drift out of date.
+"""
+
 
 def exercise3() -> bool:
     print("SERVICES (answer):")
@@ -202,59 +209,11 @@ def exercise3() -> bool:
         "volumes": "data",
     }
     ok = all(k in SERVICES.get(s, "").lower() for s, k in expected.items())
-    print(f"check result: {'PASS' if ok else 'FAIL'}")
-    return ok
-
-
-# ==========================================================================
-# EXERCISE 4 — FastAPI automatic docs
-# ==========================================================================
-
-main_solution = """\
-from fastapi import FastAPI
-
-app = FastAPI(title="Papers API", version="0.1.0")
-
-
-@app.get("/health")
-def health() -> dict:
-    \"\"\"Is this service ready?\"\"\"
-    return {"status": "ok"}
-"""
-
-docs_explanation = """\
-/docs generates an interactive Swagger UI straight from the code: every route,
-its parameters, and its response shape come from the function signatures and
-docstrings. Underneath it is /openapi.json, a machine-readable JSON spec that
-tools (clients, test generators, SDKs) consume without a human. Docs are
-generated from code rather than written by hand because the code is the single
-source of truth — when the endpoint changes, the docs change with it, so the
-docs can never silently drift out of date. It also gives you try-it-out for
-free, which is how you test an endpoint before writing a single test.
-"""
-
-
-def exercise4() -> bool:
-    print("main.py (answer):")
-    print(main_solution)
-    print("run it:")
-    print("  uv add fastapi uvicorn && uvicorn main:app --reload")
-    print("  open http://127.0.0.1:8000/docs  and  /openapi.json")
-    print("\nexplanation (docs_explanation):")
-    print(docs_explanation)
-    print()
-    try:
-        namespace: dict = {}
-        exec(compile(main_solution, "main.py", "exec"), namespace)
-        app = namespace["app"]
-    except ImportError:
-        print("check: SKIPPED — install fastapi first (uv add fastapi uvicorn)")
-        return True
-    paths = app.openapi()["paths"]
-    ok = "/health" in paths and "/docs" in paths
-    print(f"check: /health in OpenAPI paths -> {'PASS' if '/health' in paths else 'FAIL'}")
-    print(f"check: /docs   in OpenAPI paths -> {'PASS' if '/docs' in paths else 'FAIL'}")
-    return ok
+    print(f"  services ownership check: {'PASS' if ok else 'FAIL'}")
+    lower = docs_explanation.lower()
+    good = ("openapi" in lower or "/openapi.json" in lower) and ("type hint" in lower or "signature" in lower)
+    print(f"  docs explanation check:   {'PASS' if good else 'FAIL'}")
+    return ok and good
 
 
 # ==========================================================================
@@ -264,12 +223,11 @@ def main() -> None:
         "exercise 1": exercise1(),
         "exercise 2": exercise2(),
         "exercise 3": exercise3(),
-        "exercise 4": exercise4(),
     }
     print("\n" + "=" * 66)
     for name, ok in results.items():
         print(f"  {name}: {'PASS' if ok else 'FAIL'}")
-    print("  All four pass — module 01 exercises complete.")
+    print("  All three pass — module 01 exercises complete.")
 
 
 if __name__ == "__main__":

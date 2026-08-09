@@ -1,17 +1,16 @@
 #!/usr/bin/env python3
-"""Module 01 exercises — gate the four lessons.
+"""Module 01 exercises — gate the four lessons (three exercises).
 
 Run:  python3 01_exercises.py
 
-Each exercise has a small automatic check plus manual steps. The checks are
-honest: where a tool (Docker, FastAPI) must be present, the check tells you
-what to install instead of pretending.
+Each exercise has a small automatic check plus manual steps. Where a tool
+(Docker, FastAPI) must be present, the check tells you what to install
+instead of pretending.
 
-The four exercises:
+The three exercises:
   1. Run your first containerized app with Docker Compose (no framework).
   2. Add a health check endpoint in plain Python; explain why health checks exist.
-  3. Diagram the services in this system and what each one owns.
-  4. Run FastAPI's automatic docs and explain what it generates and why.
+  3. Diagram the services + explain what each owns and what /docs generates.
 """
 
 from __future__ import annotations
@@ -22,7 +21,6 @@ import os
 import shutil
 import subprocess
 import sys
-import tempfile
 import threading
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.request import urlopen
@@ -46,7 +44,6 @@ services:
 
 
 def write_compose_file(path: str = "hello-compose/compose.yml") -> str:
-    """Write the hello-world compose file to disk. Edit it if you like."""
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8") as fh:
         fh.write(HELLO_COMPOSE)
@@ -55,7 +52,6 @@ def write_compose_file(path: str = "hello-compose/compose.yml") -> str:
 
 
 def validate_compose(path: str) -> bool:
-    """Validate the compose file for real (docker compose config -q)."""
     if shutil.which("docker") is None:
         print("  docker not found — install Docker Desktop, then re-run.")
         print("  Text check instead:")
@@ -66,9 +62,7 @@ def validate_compose(path: str) -> bool:
         return not missing
     result = subprocess.run(
         ["docker", "compose", "-f", path, "config", "-q"],
-        capture_output=True,
-        text=True,
-    )
+        capture_output=True, text=True)
     if result.returncode == 0:
         print("  docker compose config: VALID")
         return True
@@ -142,7 +136,6 @@ machine can do with the 200/503 answer.
 
 
 def check_ex2(module_path: str = "health_server.py") -> bool:
-    """Exercise 2 gate: load the learner's server and probe it for real."""
     if not os.path.exists(module_path):
         print("  missing " + module_path + " — create it (spec below).")
         print(HEALTH_SPEC)
@@ -195,14 +188,19 @@ def check_ex2(module_path: str = "health_server.py") -> bool:
 
 
 # --------------------------------------------------------------------------
-# EXERCISE 3 — diagram the services and what each owns
+# EXERCISE 3 — diagram the services, what each owns, and FastAPI docs
 # --------------------------------------------------------------------------
 
 EX3_QUESTION = """\
-Fill the SERVICES dict: each of the five services in this module's project
-maps to a one-line description of WHAT IT OWNS. Then draw the same picture as
-a mermaid flowchart in a comment (services as nodes, arrows showing what calls
-what). The check verifies every service is present with the right ownership.
+Part A — Fill the SERVICES dict: each of the five services in this module's
+project maps to a one-line description of WHAT IT OWNS. Then draw the same
+picture as a mermaid flowchart in a comment (services as nodes, arrows showing
+what calls what).
+
+Part B — Answer in `docs_explanation` (3-5 sentences):
+  - What does FastAPI /docs generate, and where does it come from?
+  - What is /openapi.json, and who consumes it?
+  - Why is generating docs from code better than writing docs by hand?
 """
 
 SERVICES = {
@@ -213,9 +211,10 @@ SERVICES = {
     # "volumes": "",  # named volumes — what do they own?
 }
 
+docs_explanation = ""
+
 
 def check_ex3(services: dict[str, str]) -> bool:
-    """Exercise 3 gate: every service present, ownership described correctly."""
     expected = {
         "api": "endpoints",
         "db": "metadata",
@@ -234,66 +233,10 @@ def check_ex3(services: dict[str, str]) -> bool:
             ok = False
         else:
             print(f"  {service}: ok — '{description}'")
-    return ok
-
-
-# --------------------------------------------------------------------------
-# EXERCISE 4 — FastAPI automatic docs
-# --------------------------------------------------------------------------
-
-EX4_SPEC = """\
-Create `main.py` with a tiny FastAPI app (this is the USE IT of Lesson 02):
-
-    from fastapi import FastAPI
-
-    app = FastAPI(title="Papers API", version="0.1.0")
-
-    @app.get("/health")
-    def health() -> dict:
-        \"\"\"Is this service ready?\"\"\"
-        return {"status": "ok"}
-
-Run it, then answer in the variable `docs_explanation` (3-5 sentences):
-  pip/uv install fastapi uvicorn
-  uvicorn main:app --reload
-  open http://127.0.0.1:8000/docs
-
-Questions your explanation must answer:
-  - What does /docs generate, and where does it come from?
-  - What is /openapi.json, and who consumes it?
-  - Why is generating docs from code better than writing docs by hand?
-"""
-
-
-def check_ex4(module_path: str = "main.py") -> bool:
-    """Exercise 4 gate: the app exposes /health and docs routes."""
-    if not os.path.exists(module_path):
-        print("  missing " + module_path + " — create it (spec below).")
-        print(EX4_SPEC)
-        return False
-    try:
-        spec = importlib.util.spec_from_file_location("main_mod", module_path)
-        module = importlib.util.module_from_spec(spec)
-        spec.loader.exec_module(module)
-    except ImportError as exc:
-        print(f"  cannot import {module_path} — missing dependency? ({exc})")
-        print("  install FastAPI first:  uv add fastapi uvicorn")
-        return False
-
-    app = getattr(module, "app", None)
-    if app is None:
-        print("  main.py must define `app = FastAPI()`.")
-        return False
-    paths = app.openapi()["paths"]
-    good = "/health" in paths and "/docs" in paths
-    print(f"  /health in OpenAPI paths: {'PASS' if '/health' in paths else 'FAIL'}")
-    print(f"  /docs   in OpenAPI paths: {'PASS' if '/docs' in paths else 'FAIL'}")
-
-    explanation = getattr(module, "docs_explanation", "")
-    lower = explanation.lower()
-    good = good and ("openapi" in lower or "/openapi.json" in lower) and ("type hint" in lower or "signature" in lower)
-    print(f"  explanation mentions openapi + code-as-source:  {'PASS' if good else 'FAIL'}")
-    return good
+    lower = docs_explanation.lower()
+    good = ("openapi" in lower or "/openapi.json" in lower) and ("type hint" in lower or "signature" in lower)
+    print(f"  docs explanation mentions openapi + code-as-source: {'PASS' if good else 'FAIL'}")
+    return ok and good
 
 
 # --------------------------------------------------------------------------
@@ -316,24 +259,18 @@ def main() -> None:
     print()
 
     print("=" * 66)
-    print("EXERCISE 3 — diagram the services and what each owns")
+    print("EXERCISE 3 — diagram the services + FastAPI docs")
     print("=" * 66)
     print(EX3_QUESTION)
     results["ex3"] = check_ex3(SERVICES)
     print()
 
-    print("=" * 66)
-    print("EXERCISE 4 — FastAPI automatic docs")
-    print("=" * 66)
-    results["ex4"] = check_ex4()
-    print()
-
     print("-" * 66)
     passed = sum(1 for v in results.values() if v)
-    print(f"{passed}/4 exercises passed")
+    print(f"{passed}/3 exercises passed")
     for name, ok in results.items():
-        print(f"  {name}: {'PASS' if ok else 'FAIL — do it again, then run the solutions'}")
-    if passed < 4:
+        print(f"  {name}: {'PASS' if ok else 'FAIL — do it again, then check the solutions'}")
+    if passed < 3:
         print("\nStuck? Read the lesson builds again, then check 02_solutions.py.")
         raise SystemExit(1)
 

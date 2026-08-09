@@ -1,0 +1,13 @@
+{
+  "title": "health-check",
+  "elements": [
+    {"type": "rectangle", "x": 60, "y": 60, "w": 180, "h": 80, "text": "Load balancer / you", "fill": "#ffd8a8"},
+    {"type": "rectangle", "x": 340, "y": 60, "w": 190, "h": 80, "text": "Your service", "fill": "#a5d8ff"},
+    {"type": "rectangle", "x": 640, "y": 60, "w": 190, "h": 80, "text": "Database (dependency)", "fill": "#b2f2bb"},
+    {"type": "arrow", "x1": 240, "y1": 100, "x2": 340, "y2": 100, "endArrowhead": "arrow"},
+    {"type": "arrow", "x1": 530, "y1": 100, "x2": 640, "y2": 100, "endArrowhead": "arrow"},
+    {"type": "arrow", "x1": 640, "y1": 140, "x2": 530, "y2": 140, "endArrowhead": "arrow"},
+    {"type": "arrow", "x1": 340, "y1": 140, "x2": 240, "y2": 140, "endArrowhead": "arrow"},
+    {"type": "text", "x": 60, "y": 220, "w": 700, "h": 90, "text": "GET /health → ping → ok → 200\nDependency down → 503\nAlive is not ready."}
+  ]
+}

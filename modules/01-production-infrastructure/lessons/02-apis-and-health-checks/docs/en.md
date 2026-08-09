@@ -23,6 +23,8 @@ sequenceDiagram
     Note over LB,DB: dependency dies -> App answers 503, traffic stops flowing
 ```
 
+**Diagram (whiteboard):** open `diagrams/health-check.excalidraw` in excalidraw.com — same picture, traceable by hand.
+
 ## BUILD IT
 A complete health-checked service with the standard library — no framework:
 

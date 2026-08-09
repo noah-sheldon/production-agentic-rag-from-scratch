@@ -1,0 +1,15 @@
+{
+  "title": "quality-gate",
+  "elements": [
+    {"type": "rectangle", "x": 60, "y": 130, "w": 180, "h": 80, "text": "Your code", "fill": "#a5d8ff"},
+    {"type": "rectangle", "x": 340, "y": 60, "w": 200, "h": 70, "text": "Ruff — style", "fill": "#ffffff"},
+    {"type": "rectangle", "x": 340, "y": 140, "w": 200, "h": 70, "text": "MyPy — types", "fill": "#ffffff"},
+    {"type": "rectangle", "x": 340, "y": 220, "w": 200, "h": 70, "text": "pytest — behavior", "fill": "#ffffff"},
+    {"type": "rectangle", "x": 640, "y": 130, "w": 220, "h": 90, "text": "pre-commit gate", "fill": "#ffd8a8"},
+    {"type": "arrow", "x1": 240, "y1": 170, "x2": 340, "y2": 95, "endArrowhead": "arrow"},
+    {"type": "arrow", "x1": 240, "y1": 170, "x2": 340, "y2": 175, "endArrowhead": "arrow"},
+    {"type": "arrow", "x1": 240, "y1": 170, "x2": 340, "y2": 255, "endArrowhead": "arrow"},
+    {"type": "arrow", "x1": 540, "y1": 170, "x2": 640, "y2": 170, "endArrowhead": "arrow"},
+    {"type": "text", "x": 640, "y": 260, "w": 400, "h": 60, "text": "Any fail → stop.\nAll pass → merge."}
+  ]
+}

@@ -21,6 +21,8 @@ flowchart LR
 
 In this course's stack: [PostgreSQL (Postgres)](../../../../glossary.md#postgresql-postgres) owns the paper metadata and pipeline state. [OpenSearch](../../../../glossary.md#opensearch) owns keyword search over the abstracts. Each is good at exactly one job — that is why both exist.
 
+**Diagram (whiteboard):** open `diagrams/db-vs-search.excalidraw` in excalidraw.com — same picture, traceable by hand.
+
 ## BUILD IT
 SQLite is a database in one file, built into Python — perfect for seeing the concepts with zero setup:
 

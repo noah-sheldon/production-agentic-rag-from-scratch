@@ -29,6 +29,8 @@ flowchart LR
     Gate -- no --> Fixed["fix, then try again"]
 ```
 
+**Diagram (whiteboard):** open `diagrams/quality-gate.excalidraw` in excalidraw.com — same picture, traceable by hand.
+
 ## BUILD IT
 A tiny module with three tests — plain Python, no framework:
 

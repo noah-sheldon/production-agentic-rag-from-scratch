@@ -20,6 +20,8 @@ flowchart LR
     Kernel --> HW["one machine"]
 ```
 
+**Diagram (whiteboard):** open `diagrams/container-walls.excalidraw` in excalidraw.com — same picture, traceable by hand.
+
 ## BUILD IT
 We cannot build real containers in pure Python — but we can see the two forces that matter: the shared world and the box.
 
