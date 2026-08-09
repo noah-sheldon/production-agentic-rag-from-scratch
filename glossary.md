@@ -1,0 +1,44 @@
+# Glossary — terms in simple words
+
+Every term defined as Noah would explain it: grade-5 words, no jargon.
+
+- **RAG** — a way to let an AI answer from your own data
+- **LLM** — a big AI model that reads and writes text
+- **context window** — how much text the model can see at once
+- **tokens** — small pieces of words
+- **chunk** — a small piece of text
+- **embedding** — numbers that capture meaning
+- **vector** — a list of numbers
+- **vector store** — a database that searches by meaning
+- **sparse vector** — a word-count list with lots of zeros
+- **dense embedding** — a short list of numbers learned by a model
+- **semantic similarity search** — finding text that means the same thing
+- **retriever** — the part that fishes out relevant documents
+- **k** — how many chunks you pull back
+- **prompt template** — fill-in-the-blanks instructions for the AI
+- **output parser** — turns the AI's reply into clean text
+- **chain** — steps wired together in order
+- **query translation** — rewriting the question to search better
+- **reranking / rank fusion** — re-sorting the search results
+- **function calling** — the model uses a tool to build a filter
+- **DSL / domain specific language** — the special query language of a database (SQL, filters)
+- **hallucination** — the AI makes things up
+- **grading** — checking whether documents or answers are good enough
+- **nodes / edges** — steps and decisions in a flow diagram
+- **trace** — a recorded log of every step for debugging (LangSmith)
+- **needle-in-haystack** — a test that hides one fact in a lot of text to see if the model finds it
+- **agent loop** — the model decides what to do next, does it, checks the result, and repeats until done
+- **tool / tool definition** — a small program the model can call
+- **tool-calling** — the model asking a tool to run
+- **semantic RAG** — the classic way: grab matching documents once, then ask the model once
+- **LLM API call** — one request to the model
+- **docstring** — the description of a tool that teaches the model how to use it
+- **grep** — search that finds every matching line, with line numbers
+- **subprocess** — a Python program starting another program (Ripgrep) and reading its output
+- **structured output** — the answer forced into a fixed shape other programs can rely on
+- **citations** — the exact file, quote, and line the answer came from
+- **memory** — the agent keeping track of what it already found while working
+- **reflection** — the model looking at its own result and judging if it is good enough
+- **planner** — a step where the model writes out a plan before acting
+- **ReAct** — a pattern where the model thinks, then acts, then looks at the result
+- **re-ranker** — a second step that sorts the best matches first
