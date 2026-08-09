@@ -1,0 +1,153 @@
+{
+  "modules": [
+    {
+      "module": "00-setup-and-how-to-learn",
+      "lessons": [],
+      "exercises": [],
+      "quiz": true,
+      "project": false
+    },
+    {
+      "module": "01-production-infrastructure",
+      "lessons": [
+        {
+          "lesson": "01-what-is-a-container",
+          "docs": true,
+          "code": [
+            "build.py"
+          ],
+          "artifact": true
+        },
+        {
+          "lesson": "02-apis-and-health-checks",
+          "docs": true,
+          "code": [
+            "build.py"
+          ],
+          "artifact": true
+        },
+        {
+          "lesson": "03-databases-and-search",
+          "docs": true,
+          "code": [
+            "build.py"
+          ],
+          "artifact": true
+        },
+        {
+          "lesson": "04-code-quality",
+          "docs": true,
+          "code": [
+            "build.py"
+          ],
+          "artifact": true
+        }
+      ],
+      "exercises": [
+        "01_exercises.py",
+        "02_solutions.py"
+      ],
+      "quiz": true,
+      "project": true
+    },
+    {
+      "module": "02-data-ingestion",
+      "lessons": [
+        {
+          "lesson": "01-what-is-an-ingestion-pipeline",
+          "docs": true,
+          "code": [
+            "build.py"
+          ],
+          "artifact": true
+        },
+        {
+          "lesson": "02-retries-and-backoff",
+          "docs": true,
+          "code": [
+            "build.py"
+          ],
+          "artifact": true
+        },
+        {
+          "lesson": "03-parsing-documents",
+          "docs": true,
+          "code": [
+            "build.py"
+          ],
+          "artifact": true
+        }
+      ],
+      "exercises": [
+        "01_exercises.py",
+        "02_solutions.py"
+      ],
+      "quiz": true,
+      "project": true
+    },
+    {
+      "module": "03-keyword-search-bm25",
+      "lessons": [
+        {
+          "lesson": "01-bm25-by-hand",
+          "docs": true,
+          "code": [
+            "build.py"
+          ],
+          "artifact": true
+        },
+        {
+          "lesson": "02-k1-and-b",
+          "docs": true,
+          "code": [
+            "build.py"
+          ],
+          "artifact": true
+        },
+        {
+          "lesson": "03-precision-and-recall",
+          "docs": true,
+          "code": [
+            "build.py"
+          ],
+          "artifact": true
+        }
+      ],
+      "exercises": [
+        "01_exercises.py",
+        "02_solutions.py"
+      ],
+      "quiz": true,
+      "project": true
+    },
+    {
+      "module": "04-chunking-hybrid-search",
+      "lessons": [],
+      "exercises": [],
+      "quiz": false,
+      "project": false
+    },
+    {
+      "module": "05-rag-pipeline-local-llm",
+      "lessons": [],
+      "exercises": [],
+      "quiz": false,
+      "project": false
+    },
+    {
+      "module": "06-observability-caching",
+      "lessons": [],
+      "exercises": [],
+      "quiz": false,
+      "project": false
+    },
+    {
+      "module": "07-agentic-rag-bot",
+      "lessons": [],
+      "exercises": [],
+      "quiz": false,
+      "project": false
+    }
+  ],
+  "lesson_count": 10
+}

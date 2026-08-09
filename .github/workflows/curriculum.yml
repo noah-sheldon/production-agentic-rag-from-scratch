@@ -1,0 +1,26 @@
+name: curriculum
+
+on:
+  pull_request:
+  push:
+    branches: [master]
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Audit lessons (warn only)
+        run: python3 scripts/audit_lessons.py || true
+      - name: Lesson syntax check
+        run: python3 scripts/lesson_run.py
+      - name: Rebuild catalog and fail if stale
+        run: |
+          python3 scripts/build_catalog.py
+          git diff --exit-code catalog.json || {
+            echo "catalog.json is stale — run: python3 scripts/build_catalog.py"
+            exit 1
+          }
