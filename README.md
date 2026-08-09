@@ -19,18 +19,26 @@ it was doing for us.
 
 ## Curriculum v1.0 (2026) — open source · MIT
 
+Nine modules, build YOUR personal knowledge assistant — from an empty machine
+to a tool-wielding agent over your own notes. No week/day framing; move at
+your own pace, projects gate modules.
+
 | Module | Title | Project |
 |---|---|---|
-| 01 | Production Infrastructure | Service skeleton |
-| 02 | Data Ingestion | Paper ingest pipeline |
-| 03 | Keyword Search First (BM25) | Your own BM25 search |
-| 04 | Chunking & Hybrid Search | Hybrid search endpoint |
-| 05 | RAG Pipeline + Local LLM | Private ask-your-papers |
-| 06 | Observability & Caching | Cache + cost dashboard |
-| 07 | Agentic RAG + Bot | The arXiv curator, complete |
+| 0 | Setup + How to Learn | Environment ready, tutor installed |
+| 1 | Production Infrastructure | Your dev lab: one-command local stack |
+| 2 | Data Ingestion | Read-it-later: save, parse, store your notes |
+| 3 | Keyword Search First (BM25) | BM25 search over your notes |
+| 4 | Chunking + Embeddings | Semantic index of your notes |
+| 5 | Hybrid Search (RRF) | Hybrid search over your notes |
+| 6 | RAG Pipeline + Local LLM | Ask your notes — private, local |
+| 7 | Observability + Caching | Cost + cache dashboard |
+| 8 | Agentic RAG: Tools + the Loop | Notes assistant with tools |
+| 9 | Evaluation + Capstone | Measure, ship, publish your assistant |
 
-Every module ships **exercises** (gate lessons) and a **project** (gate the
-module). Build first, frameworks second, artifacts always.
+Every module ships **2-3 exercises** (gate lessons), a **weekly quiz reviewed
+by a human** (no auto-pass), and a **project** (gate the module). Build first,
+frameworks second, artifacts always.
 
 ## Lesson format (Six Beats)
 
