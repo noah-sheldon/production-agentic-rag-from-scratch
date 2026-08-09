@@ -36,16 +36,11 @@ Raw base: `https://raw.githubusercontent.com/noah-sheldon/production-agentic-rag
 2. How much time per week? (~2h / ~5h / ~10h / as fast as possible)
 3. What do you most want to build by the end? (RAG product / agent / production system / not sure)
 
-## Step 2 — Placement (5 questions)
+## Step 2 — Placement
 
-1. Comfort with Python? (none / basic / confident)
-2. Built a RAG system? (never / tried / shipped)
-3. Built an agent loop? (never / tried / shipped)
-4. Comfort with Docker / infra? (none / some / comfortable)
-5. What do you want to build? (RAG / agents / production / everything)
-
-Rule: Python none OR infra none → start Module 0 (setup). RAG never → Module 1.
-Loop never → Modules 1-8 in order. Shipped both → start Module 8, then 9.
+Run the `find-your-level` skill (installs alongside this one): 5 questions →
+entry module. If the learner already knows their entry point, respect it.
+Output contract: entry module + the Path table (modules 0-9, statuses).
 
 ## Step 3 — Write LEARNING.md
 
