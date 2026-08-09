@@ -6,11 +6,13 @@ description: One-time onboarding for the Applied AI from Scratch course — plac
 # /start-learning
 
 ## 1. Placement
-Ask 5 questions to place the learner:
+Start at Module 00: read `modules/00-setup-and-how-to-learn/README.md`, run
+`check_setup.py`, complete the HITL quiz. Then ask 5 questions to place the
+learner:
 1. Comfort with Python (none / basic / confident)
 2. Have you built a RAG system? (never / tried / shipped)
 3. Have you built an agent loop? (never / tried / shipped)
-4. Comfort with the math (matrices, cosine similarity)? (none / some / comfortable)
+4. Comfort with Docker / infra? (none / some / comfortable)
 5. What do you want to build? (RAG / agents / production systems / everything)
 
 ## 2. Path

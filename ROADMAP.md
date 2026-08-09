@@ -11,7 +11,8 @@ result-driven, agent frameworks) live in a future course/series — not here.
 
 | # | Module | Project (your own build) |
 |---|---|---|
-| 1 | Setup + Production Infrastructure | Your dev lab: one-command local stack |
+| 0 | Setup + How to Learn | Your environment passes `check_setup.py` + tutor installed |
+| 1 | Production Infrastructure | Your dev lab: one-command local stack |
 | 2 | Data Ingestion | Read-it-later: save, parse, store your notes/articles |
 | 3 | Keyword Search First (BM25) | BM25 search over your notes |
 | 4 | Chunking + Embeddings | Semantic index of your notes |
