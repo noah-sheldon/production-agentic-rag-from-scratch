@@ -1,0 +1,99 @@
+# Module 01 project skeleton — the arXiv paper curator, all local.
+#
+#   docker compose up -d
+#   docker compose ps        # health of every service, one command
+#   curl -s localhost:8000/health
+#
+# Services:
+#   app     -> the health endpoint (plain stdlib server for now; the project's
+#              first TODO is to swap it for FastAPI so /docs generates itself)
+#   db      -> PostgreSQL 16: owns paper metadata + pipeline state
+#   search  -> OpenSearch 2: owns the inverted index + keyword search
+#   llm     -> Ollama: runs the local language model
+#
+# TODOs (each maps to a module-01 lesson):
+#   [ ] Replace `image: python:3.12-slim` + bind mount with a real build
+#       (Dockerfile) once the app needs dependencies (FastAPI, psycopg, ...).
+#   [ ] Re-enable OpenSearch security for anything beyond local development.
+#   [ ] Add a `.env` file instead of plaintext passwords (never commit .env).
+
+name: arxiv-curator
+
+services:
+  app:
+    image: python:3.12-slim
+    command: ["python", "app.py", "--port", "8000"]
+    working_dir: /app
+    volumes:
+      - ./app.py:/app/app.py
+    environment:
+      SERVICE_DB_HOST: db
+      SERVICE_DB_PORT: "5432"
+      SERVICE_SEARCH_URL: http://search:9200
+      SERVICE_LLM_URL: http://llm:11434
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+      search:
+        condition: service_healthy
+      llm:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c",
+             "import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://localhost:8000/health', timeout=2).status==200 else 1)"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: app
+      POSTGRES_PASSWORD: app
+      POSTGRES_DB: papers
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U app -d papers"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  search:
+    image: opensearchproject/opensearch:2
+    environment:
+      discovery.type: single-node
+      DISABLE_SECURITY_PLUGIN: "true"   # TODO: re-enable outside local dev
+      OPENSEARCH_JAVA_OPTS: "-Xms512m -Xmx512m"
+    ports:
+      - "9200:9200"
+    volumes:
+      - osdata:/usr/share/opensearch/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -s http://localhost:9200/_cluster/health | grep -q '\"status\":\"green\"'"]
+      interval: 10s
+      timeout: 5s
+      retries: 15
+      start_period: 30s
+
+  llm:
+    image: ollama/ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama:/root/.ollama
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
+
+volumes:
+  pgdata:
+  osdata:
+  ollama:

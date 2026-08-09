@@ -42,3 +42,36 @@ Every term defined as Noah would explain it: grade-5 words, no jargon.
 - **planner** — a step where the model writes out a plan before acting
 - **ReAct** — a pattern where the model thinks, then acts, then looks at the result
 - **re-ranker** — a second step that sorts the best matches first
+
+## Module 01 — Production Infrastructure
+
+- **process** — a running program, with its own memory and a number the system uses to name it
+- **PID** — the process ID, the number the operating system uses to name a running program
+- **subprocess** — a Python program starting another program and reading its output
+- **isolation** — keeping one program's files and settings away from another's
+- **container** — a lightweight box that runs one program with its own files, settings, and network ports
+- **image** — the frozen blueprint a container is built from
+- **Docker** — a tool that builds and runs containers
+- **Docker Compose** — a tool that starts many containers from one config file with one command
+- **port** — a numbered door on a machine programs use to talk to each other
+- **volume** — a folder on your machine shared with a container, so data survives restarts
+- **endpoint** — one address (URL) where a program answers a request
+- **API** — a set of defined requests one program makes to another
+- **health check** — a small request a program answers to prove it is truly working, not just alive
+- **status code** — the number a server sends back to say how a request went (200 = ok, 503 = not ready)
+- **async** — code that waits without blocking, so one slow request does not freeze the rest
+- **database** — a program that stores data and answers queries
+- **SQL** — the query language of relational databases
+- **schema** — the fixed shape of the data a database stores
+- **index** — a structure a database builds so it can find data fast without scanning everything
+- **ORM** — a layer that turns database rows into Python objects
+- **search engine** — a program that builds an index of text and answers "find me the best matches" queries
+- **inverted index** — the search engine's map from words to the documents that contain them
+- **PostgreSQL (Postgres)** — a server database that many programs can connect to over the network
+- **OpenSearch** — a search engine that indexes text for fast keyword search
+- **Ollama** — a tool that runs large language models on your own machine
+- **linter** — a tool that checks code style and catches mistakes before the code runs
+- **formatter** — a tool that rewrites your code to one consistent style
+- **type checker** — a tool that checks the data types in your code before it runs
+- **test** — a small program that checks your code does what you expect
+- **pre-commit** — a tool that runs checks automatically before you save a change to git
