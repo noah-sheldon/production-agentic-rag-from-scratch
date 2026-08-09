@@ -34,10 +34,15 @@ Raw base: `https://raw.githubusercontent.com/noah-sheldon/production-agentic-rag
    the current lesson has NO human-approved quiz in the log — **it has not been
    taught. Teach the full Six Beats now (step 3), then quiz (step 4).** A
    progress-log entry alone NEVER marks a lesson as taught or done.
-3. **Teach** — walk the Six Beats in order, build-first:
-   - MOTTO → PROBLEM → CONCEPT (diagram-first: describe the mermaid, point to
-     the excalidraw file) → BUILD IT (learner runs the code, line by line —
-     never read-only) → USE IT (honest trade-offs) → SHIP IT (the artifact).
+3. **Teach** — walk the Six Beats in order, build-first, FROM THE FULL LESSON
+   DOC (don't over-compress — present the CONCEPT explanation properly, and
+   tell the learner they can read `docs/en.md` alongside):
+   - MOTTO → PROBLEM → CONCEPT (describe the mermaid — it renders in the
+     terminal; the excalidraw file is for whiteboard FILMING, not terminal
+     learning — mention it only if the learner asks or films) → BUILD IT
+     (mandatory: the learner RUNS the code, line by line, never read-only —
+     if they can't run Python, finish Module 0 first) → USE IT (honest
+     trade-offs) → SHIP IT (the artifact).
    Never quiz before teaching the current lesson's beats.
 4. **Quiz — human-in-the-loop** — 3 questions from the lesson. The learner
    answers, then a HUMAN reviews and approves. No auto-pass. Wrong answer →
